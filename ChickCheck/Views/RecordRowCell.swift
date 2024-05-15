@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct RecordRowCell: View {
-    var count: String
-    var date: String
+    private var count: String
+    private var date: String
     
     var body: some View {
         HStack {
@@ -34,6 +34,11 @@ struct RecordRowCell: View {
         .background(Color.pinkRose)
         .cornerRadius(8)
         .listRowInsets(.init(top: 0, leading: 20, bottom: 0, trailing: 20))
+    }
+    
+    init(count: String, date: String) {
+        self.count = count
+        self.date = date
     }
 }
 
