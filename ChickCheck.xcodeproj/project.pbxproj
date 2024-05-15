@@ -67,11 +67,10 @@
 		1156AEC12BF49ADD00D21E1B /* ChickCheck */ = {
 			isa = PBXGroup;
 			children = (
+				1156AEEB2BF5543600D21E1B /* App */,
 				1156AED62BF4A6EE00D21E1B /* Views */,
 				1156AED42BF4A6CA00D21E1B /* Screens */,
-				1156AEC22BF49ADD00D21E1B /* ChickCheckApp.swift */,
-				1156AEC62BF49ADE00D21E1B /* Assets.xcassets */,
-				1156AEC82BF49ADE00D21E1B /* Preview Content */,
+				1156AEEC2BF5548700D21E1B /* Media */,
 			);
 			path = ChickCheck;
 			sourceTree = "<group>";
@@ -129,6 +128,23 @@
 				1156AEE32BF4CF6600D21E1B /* DetailView.swift */,
 			);
 			path = Detail;
+			sourceTree = "<group>";
+		};
+		1156AEEB2BF5543600D21E1B /* App */ = {
+			isa = PBXGroup;
+			children = (
+				1156AEC22BF49ADD00D21E1B /* ChickCheckApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		1156AEEC2BF5548700D21E1B /* Media */ = {
+			isa = PBXGroup;
+			children = (
+				1156AEC62BF49ADE00D21E1B /* Assets.xcassets */,
+				1156AEC82BF49ADE00D21E1B /* Preview Content */,
+			);
+			path = Media;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -343,7 +359,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"ChickCheck/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"ChickCheck/Media/Preview Content\"";
 				DEVELOPMENT_TEAM = LSX73KEXNV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -372,7 +388,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"ChickCheck/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"ChickCheck/Media/Preview Content\"";
 				DEVELOPMENT_TEAM = LSX73KEXNV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
