@@ -16,6 +16,7 @@
 		1156AEDC2BF4B07300D21E1B /* RecordRowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1156AEDB2BF4B07300D21E1B /* RecordRowCell.swift */; };
 		1156AEE12BF4C7AB00D21E1B /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1156AEE02BF4C7AB00D21E1B /* StatisticsView.swift */; };
 		1156AEE42BF4CF6600D21E1B /* DetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1156AEE32BF4CF6600D21E1B /* DetailScreen.swift */; };
+		1156AEE62BF5521C00D21E1B /* StatisticsValueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1156AEE52BF5521C00D21E1B /* StatisticsValueView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		1156AEDB2BF4B07300D21E1B /* RecordRowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordRowCell.swift; sourceTree = "<group>"; };
 		1156AEE02BF4C7AB00D21E1B /* StatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsView.swift; sourceTree = "<group>"; };
 		1156AEE32BF4CF6600D21E1B /* DetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailScreen.swift; sourceTree = "<group>"; };
+		1156AEE52BF5521C00D21E1B /* StatisticsValueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsValueView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				1156AED72BF4A79600D21E1B /* AddButton.swift */,
 				1156AED92BF4A7B500D21E1B /* EmptyView.swift */,
 				1156AEDB2BF4B07300D21E1B /* RecordRowCell.swift */,
+				1156AEE52BF5521C00D21E1B /* StatisticsValueView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -199,6 +202,7 @@
 				1156AED32BF49B6000D21E1B /* HomeView.swift in Sources */,
 				1156AEE42BF4CF6600D21E1B /* DetailScreen.swift in Sources */,
 				1156AEC32BF49ADD00D21E1B /* ChickCheckApp.swift in Sources */,
+				1156AEE62BF5521C00D21E1B /* StatisticsValueView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
