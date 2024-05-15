@@ -8,17 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		1156AEC32BF49ADD00D21E1B /* ChickCheckApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1156AEC22BF49ADD00D21E1B /* ChickCheckApp.swift */; };
-		1156AEC52BF49ADD00D21E1B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1156AEC42BF49ADD00D21E1B /* ContentView.swift */; };
 		1156AEC72BF49ADE00D21E1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1156AEC62BF49ADE00D21E1B /* Assets.xcassets */; };
 		1156AECA2BF49ADE00D21E1B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1156AEC92BF49ADE00D21E1B /* Preview Assets.xcassets */; };
+		1156AED32BF49B6000D21E1B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1156AED22BF49B6000D21E1B /* HomeView.swift */; };
+		1156AED82BF4A79600D21E1B /* AddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1156AED72BF4A79600D21E1B /* AddButton.swift */; };
+		1156AEDA2BF4A7B500D21E1B /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1156AED92BF4A7B500D21E1B /* EmptyView.swift */; };
+		1156AEDC2BF4B07300D21E1B /* RecordRowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1156AEDB2BF4B07300D21E1B /* RecordRowCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1156AEBF2BF49ADD00D21E1B /* ChickCheck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChickCheck.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1156AEC22BF49ADD00D21E1B /* ChickCheckApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChickCheckApp.swift; sourceTree = "<group>"; };
-		1156AEC42BF49ADD00D21E1B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1156AEC62BF49ADE00D21E1B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1156AEC92BF49ADE00D21E1B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		1156AED22BF49B6000D21E1B /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		1156AED72BF4A79600D21E1B /* AddButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddButton.swift; sourceTree = "<group>"; };
+		1156AED92BF4A7B500D21E1B /* EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
+		1156AEDB2BF4B07300D21E1B /* RecordRowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordRowCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +57,9 @@
 		1156AEC12BF49ADD00D21E1B /* ChickCheck */ = {
 			isa = PBXGroup;
 			children = (
+				1156AED62BF4A6EE00D21E1B /* Views */,
+				1156AED42BF4A6CA00D21E1B /* Screens */,
 				1156AEC22BF49ADD00D21E1B /* ChickCheckApp.swift */,
-				1156AEC42BF49ADD00D21E1B /* ContentView.swift */,
 				1156AEC62BF49ADE00D21E1B /* Assets.xcassets */,
 				1156AEC82BF49ADE00D21E1B /* Preview Content */,
 			);
@@ -65,6 +72,32 @@
 				1156AEC92BF49ADE00D21E1B /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		1156AED42BF4A6CA00D21E1B /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				1156AED52BF4A6D100D21E1B /* Home */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		1156AED52BF4A6D100D21E1B /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				1156AED22BF49B6000D21E1B /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		1156AED62BF4A6EE00D21E1B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1156AED72BF4A79600D21E1B /* AddButton.swift */,
+				1156AED92BF4A7B500D21E1B /* EmptyView.swift */,
+				1156AEDB2BF4B07300D21E1B /* RecordRowCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +170,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1156AEC52BF49ADD00D21E1B /* ContentView.swift in Sources */,
+				1156AEDC2BF4B07300D21E1B /* RecordRowCell.swift in Sources */,
+				1156AEDA2BF4A7B500D21E1B /* EmptyView.swift in Sources */,
+				1156AED82BF4A79600D21E1B /* AddButton.swift in Sources */,
+				1156AED32BF49B6000D21E1B /* HomeView.swift in Sources */,
 				1156AEC32BF49ADD00D21E1B /* ChickCheckApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
