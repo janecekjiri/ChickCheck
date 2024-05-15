@@ -1,5 +1,5 @@
 //
-//  DetailScreen.swift
+//  DetailView.swift
 //  ChickCheck
 //
 //  Created by Jiri Janecek on 15.05.2024.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct DetailScreen: View {
+struct DetailView: View {
     var body: some View {
         VStack(spacing: 0) {
             DateFormView()
@@ -41,7 +41,7 @@ struct DetailScreen: View {
 }
 
 #Preview {
-    DetailScreen()
+    DetailView()
 }
 
 struct DateFormView: View {
