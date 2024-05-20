@@ -11,7 +11,19 @@ import SwiftUI
 struct ChickCheckApp: App {
     var body: some Scene {
         WindowGroup {
-            HomeView()
+            TabView {
+                HomeView()
+                    .tabItem {
+                        Image(systemName: "house.fill")
+                        Text("Snůška")
+                    }
+                
+                StatisticsView()
+                    .tabItem {
+                        Image(systemName: "chart.bar.fill")
+                        Text("Statistiky")
+                    }
+            }
         }
     }
 }
