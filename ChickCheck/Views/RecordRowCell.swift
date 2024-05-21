@@ -17,6 +17,7 @@ struct RecordRowCell: View {
                 .font(.largeTitle)
                 .fontWeight(.medium)
                 .frame(width: 45, alignment: .trailing)
+                .foregroundStyle(.black)
             
             Image("egg")
                 .resizable()
@@ -28,6 +29,7 @@ struct RecordRowCell: View {
             Text(date)
                 .font(.title2)
                 .fontWeight(.medium)
+                .foregroundStyle(.black)
         }
         .padding(.horizontal, 10)
         .padding(.vertical, 5)

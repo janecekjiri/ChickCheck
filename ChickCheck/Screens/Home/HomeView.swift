@@ -9,6 +9,32 @@ import SwiftUI
 
 struct HomeView: View {
     var body: some View {
+        NavigationStack {
+            HomeContentView()
+                .navigationBarTitleDisplayMode(.inline)
+                .toolbar {
+                    ToolbarItem(placement: .topBarTrailing) {
+                        Button(
+                            action: {
+                                // TODO: Zobraz alert
+                            },
+                            label: {
+                                Image(systemName: "trash")
+                                    .renderingMode(.template)
+                                    .foregroundStyle(Color(.label))
+                        })
+                    }
+                }
+        }
+    }
+}
+
+#Preview {
+    HomeView()
+}
+
+struct HomeContentView: View {
+    var body: some View {
         ZStack {
             List {
                 RecordRowCell(count: "88", date: "8.5.2024")
@@ -51,8 +77,4 @@ struct HomeView: View {
             }
         }
     }
-}
-
-#Preview {
-    HomeView()
 }
