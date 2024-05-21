@@ -16,7 +16,7 @@ struct StatisticsValueView: View {
             .font(.system(size: 50))
             .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
         
-        Text("průměrná snůška za posledních \(timeRange.numValue) dní")
+        Text("\(timeRange.numValue) average_bunch")
             .font(.title2)
             .fontWeight(.semibold)
             .foregroundStyle(Color(.systemGray2))

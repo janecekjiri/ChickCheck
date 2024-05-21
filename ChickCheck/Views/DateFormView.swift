@@ -11,7 +11,7 @@ struct DateFormView: View {
     var body: some View {
         // Datum label
         HStack {
-            Text("Datum")
+            Text("date")
                 .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
                 .fontWeight(.bold)
             
@@ -30,7 +30,7 @@ struct DateFormView: View {
                     .cornerRadius(5)
                 
                 HStack {
-                    Text("9.5.2024")
+                    Text(verbatim: "9.5.2024")
                         .font(.title2)
                         .fontWeight(.semibold)
                         .padding(.vertical, 12)
@@ -58,7 +58,7 @@ struct DateFormView: View {
         
         // Text pod polem
         HStack {
-            Text("Klikněte na tlačítko Kalendáře pro výběr datumu.")
+            Text("date_picker_helper_message")
                 .font(.footnote)
             
             Spacer()

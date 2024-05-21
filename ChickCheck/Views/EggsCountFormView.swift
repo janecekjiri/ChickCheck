@@ -12,7 +12,7 @@ struct EggsCountFormView: View {
     
     var body: some View {
         HStack {
-            Text("Počet vajíček")
+            Text("eggs_count")
                 .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
                 .fontWeight(.bold)
             
@@ -22,7 +22,7 @@ struct EggsCountFormView: View {
         Spacer()
             .frame(height: 10)
         
-        TextField("Zadejte počet vajíček", text: $eggsCount)
+        TextField("insert_eggs_count", text: $eggsCount)
             .font(.title2)
             .fontWeight(.semibold)
             .padding(.vertical, 12)

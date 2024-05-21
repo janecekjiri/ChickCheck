@@ -44,7 +44,7 @@ struct StatisticsView: View {
             Button(action: {
                 
             }, label: {
-                Text("Smazat statistiky")
+                Text("delete_statistics")
                     .font(.title2)
                     .foregroundStyle(.white)
                     .padding(.vertical, 12)

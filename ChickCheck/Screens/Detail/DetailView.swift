@@ -22,7 +22,7 @@ struct DetailView: View {
             Button(action: {
                 
             }, label: {
-                Text("Uložit")
+                Text("save")
                     .font(.title2)
                     .fontWeight(.semibold)
                     .foregroundStyle(.white)

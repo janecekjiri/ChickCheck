@@ -15,11 +15,11 @@ struct EmptyView: View {
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 150, height: 150)
             
-            Text("Snesly už Vaše slepičky?")
+            Text("empty_view_title")
                 .font(.title2)
                 .fontWeight(.semibold)
             
-            Text("Zatím jste neuložili žádnou snůšku. Pokud už Vaše slepičky snesly vajíčka, můžete je uložit tapnutím na zelené tlačítko “+” níže.")
+            Text("empty_view_message")
                 .font(.body)
                 .multilineTextAlignment(.center)
             

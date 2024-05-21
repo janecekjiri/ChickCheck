@@ -15,13 +15,13 @@ struct ChickCheckApp: App {
                 HomeView()
                     .tabItem {
                         Image(systemName: "house.fill")
-                        Text("Snůška")
+                        Text("tab_bunch")
                     }
                 
                 StatisticsView()
                     .tabItem {
                         Image(systemName: "chart.bar.fill")
-                        Text("Statistiky")
+                        Text("tab_stats")
                     }
             }
         }
