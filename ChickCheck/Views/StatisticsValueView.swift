@@ -12,14 +12,24 @@ struct StatisticsValueView: View {
     private var timeRange: TimeRangeEnum
     
     var body: some View {
-        Text(value)
-            .font(.system(size: 50))
-            .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-        
-        Text("\(timeRange.numValue) average_bunch")
-            .font(.title2)
-            .fontWeight(.semibold)
-            .foregroundStyle(Color(.systemGray2))
+        VStack(spacing: 0) {
+            HStack {
+                Text(value)
+                    .font(.system(size: 50))
+                    .fontWeight(.bold)
+                
+                Spacer()
+            }
+            
+            HStack {
+                Text("\(timeRange.numValue) average_bunch")
+                    .font(.title2)
+                    .fontWeight(.semibold)
+                    .foregroundStyle(Color(.systemGray2))
+                
+                Spacer()
+            }
+        }
     }
     
     init(value: String, timeRange: TimeRangeEnum) {

@@ -40,22 +40,6 @@ struct StatisticsView: View {
             StatisticsValueView(value: "14,6", timeRange: .thirtyDays)
             
             Spacer()
-            
-            Button(action: {
-                
-            }, label: {
-                Text("delete_statistics")
-                    .font(.title2)
-                    .foregroundStyle(.white)
-                    .padding(.vertical, 12)
-            })
-            .frame(minWidth: 0, maxWidth: .infinity)
-            .frame(height: 50)
-            .background(Color.red)
-            .cornerRadius(25)
-            
-            Spacer()
-                .frame(height: 20)
         }
         .padding(.horizontal, 10)
     }
