@@ -73,6 +73,38 @@
         }
       }
     },
+    "delete_all_bunches_alert_message" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pokud zvolíte \"Ano\", všechny snůšky budou smazány. Tuto akci nelze vzít zpět."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "If you select \"Yes\", all bunches will be removed. This action cannot be undone."
+          }
+        }
+      }
+    },
+    "delete_all_bunches_alert_title" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Přejete si smazat všechny uložené snůšky?"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Do you wish to delete all recorded bunches?"
+          }
+        }
+      }
+    },
     "delete_statistics" : {
       "localizations" : {
         "cs" : {
@@ -153,6 +185,22 @@
         }
       }
     },
+    "no" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ne"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No"
+          }
+        }
+      }
+    },
     "save" : {
       "localizations" : {
         "cs" : {
@@ -197,6 +245,22 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Statistics"
+          }
+        }
+      }
+    },
+    "yes" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ano"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yes"
           }
         }
       }

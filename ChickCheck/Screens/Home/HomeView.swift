@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct HomeView: View {
+    @State private var showAlert = false
+    @Environment(\.dismiss) var dismiss
+    
     var body: some View {
         NavigationStack {
             HomeContentView()
@@ -16,7 +19,7 @@ struct HomeView: View {
                     ToolbarItem(placement: .topBarTrailing) {
                         Button(
                             action: {
-                                // TODO: Zobraz alert
+                                showAlert = true
                             },
                             label: {
                                 Image(systemName: "trash")
@@ -26,6 +29,34 @@ struct HomeView: View {
                     }
                 }
         }
+        .alert(
+            "delete_all_bunches_alert_title",
+            isPresented: $showAlert,
+            actions: {
+                Button(
+                    role: .destructive,
+                    action: {
+                        dismiss()
+                        // TODO: Smaž všechny záznamy
+                    },
+                    label: {
+                        Text("yes")
+                })
+                
+                Button(
+                    role: .cancel,
+                    action: {
+                        dismiss()
+                    },
+                    label: {
+                        Text("no")
+                    }
+                )
+            },
+            message: {
+                Text("delete_all_bunches_alert_message")
+            }
+        )
     }
 }
 
