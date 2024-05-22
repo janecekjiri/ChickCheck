@@ -105,6 +105,38 @@
         }
       }
     },
+    "delete_detail_alert_message" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pokud zvolíte \"Ano\", tento záznam bude smazán. Tuto akci nelze vzít zpět."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "If you select \"Yes\", this record will be removed. This action cannot be undone."
+          }
+        }
+      }
+    },
+    "delete_detail_alert_title" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Přejete si smazat tento záznam?"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Do you wish to delete this record?"
+          }
+        }
+      }
+    },
     "delete_statistics" : {
       "localizations" : {
         "cs" : {
@@ -117,6 +149,22 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Delete statistics"
+          }
+        }
+      }
+    },
+    "detail_screen_title" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Detail"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Detail"
           }
         }
       }
