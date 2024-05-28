@@ -87,6 +87,7 @@ struct HomeContentView: View {
                 ZStack(alignment: .center) {
                     RecordRowCell(count: "88", date: "8.5.2024")
                     
+                    // TODO: Použít zde navigationDestination
                     NavigationLink(destination: DetailView()) {
                         EmptyView()
                     }
