@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct AddButton: View {
+    var onTap: (() -> Void)?
     @State private var isPressed = false
     
     var body: some View {
@@ -25,6 +26,7 @@ struct AddButton: View {
                         }
                     }
                 }
+                onTap?()
             }
     }
 }

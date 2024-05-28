@@ -57,6 +57,16 @@ struct DetailView: View {
                                 .foregroundStyle(Color(.label))
                     })
                 }
+                
+                ToolbarItem(placement: .topBarLeading) {
+                    Button(
+                        action: {
+                            dismiss()
+                        },
+                        label: {
+                            Text("cancel")
+                    })
+                }
             }
         }
         .alert(

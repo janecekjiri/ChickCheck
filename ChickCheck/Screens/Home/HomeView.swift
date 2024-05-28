@@ -8,18 +8,19 @@
 import SwiftUI
 
 struct HomeView: View {
-    @State private var showAlert = false
+    @State private var showDeleteAlert = false
+    @State private var showDetailModal = false
     @Environment(\.dismiss) var dismiss
     
     var body: some View {
         NavigationStack {
-            HomeContentView()
+            makeContentView()
                 .navigationBarTitleDisplayMode(.inline)
                 .toolbar {
                     ToolbarItem(placement: .topBarTrailing) {
                         Button(
                             action: {
-                                showAlert = true
+                                showDeleteAlert = true
                             },
                             label: {
                                 Image(systemName: "trash")
@@ -31,7 +32,7 @@ struct HomeView: View {
         }
         .alert(
             "delete_all_bunches_alert_title",
-            isPresented: $showAlert,
+            isPresented: $showDeleteAlert,
             actions: {
                 Button(
                     role: .destructive,
@@ -57,6 +58,17 @@ struct HomeView: View {
                 Text("delete_all_bunches_alert_message")
             }
         )
+        .sheet(isPresented: $showDetailModal, content: {
+            DetailView()
+        })
+    }
+    
+    private func makeContentView() -> HomeContentView {
+        var content = HomeContentView()
+        content.onAddButtonTap = {
+            showDetailModal = true
+        }
+        return content
     }
 }
 
@@ -65,6 +77,8 @@ struct HomeView: View {
 }
 
 struct HomeContentView: View {
+    var onAddButtonTap: (() -> Void)?
+    
     var body: some View {
         ZStack {
             List {
@@ -100,12 +114,18 @@ struct HomeContentView: View {
                 HStack {
                     Spacer()
                     
-                    AddButton()
+                    makeAddButton()
                     
                     Spacer()
                         .frame(width: 20)
                 }
             }
         }
+    }
+    
+    private func makeAddButton() -> AddButton {
+        var button = AddButton()
+        button.onTap = onAddButtonTap
+        return button
     }
 }
