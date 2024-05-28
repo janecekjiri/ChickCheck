@@ -59,7 +59,9 @@ struct HomeView: View {
             }
         )
         .sheet(isPresented: $showDetailModal, content: {
-            DetailView()
+            NavigationStack {
+                DetailView()
+            }
         })
     }
     
