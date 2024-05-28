@@ -82,26 +82,40 @@ struct HomeContentView: View {
     var body: some View {
         ZStack {
             List {
-                RecordRowCell(count: "88", date: "8.5.2024")
-                RecordRowCell(count: "5", date: "8.5.2024")
-                RecordRowCell(count: "5", date: "8.5.2024")
-                RecordRowCell(count: "5", date: "8.5.2024")
-                RecordRowCell(count: "5", date: "8.5.2024")
-                RecordRowCell(count: "5", date: "8.5.2024")
-                RecordRowCell(count: "5", date: "8.5.2024")
-                RecordRowCell(count: "5", date: "8.5.2024")
-                RecordRowCell(count: "5", date: "8.5.2024")
-                RecordRowCell(count: "5", date: "8.5.2024")
-                RecordRowCell(count: "5", date: "8.5.2024")
-                RecordRowCell(count: "5", date: "8.5.2024")
-                RecordRowCell(count: "5", date: "8.5.2024")
-                RecordRowCell(count: "5", date: "8.5.2024")
-                RecordRowCell(count: "5", date: "8.5.2024")
-                RecordRowCell(count: "5", date: "8.5.2024")
-                RecordRowCell(count: "5", date: "8.5.2024")
+                ZStack(alignment: .center) {
+                    RecordRowCell(count: "88", date: "8.5.2024")
+                    
+                    NavigationLink(destination: DetailView()) {
+                        EmptyView()
+                    }
+                    .opacity(0)
+                }
+                .listRowInsets(.init(top: 0, leading: 20, bottom: 0, trailing: 20))
+                .listRowSeparator(.hidden)
+                
+                ZStack(alignment: .center) {
+                    RecordRowCell(count: "5", date: "7.5.2024")
+                    
+                    NavigationLink(destination: DetailView()) {
+                        EmptyView()
+                    }
+                    .opacity(0)
+                }
+                .listRowInsets(.init(top: 0, leading: 20, bottom: 0, trailing: 20))
+                .listRowSeparator(.hidden)
+                
+                ZStack {
+                    RecordRowCell(count: "13", date: "6.5.2024")
+                    
+                    NavigationLink(destination: DetailView()) {
+                        EmptyView()
+                    }
+                    .opacity(0)
+                }
+                .listRowInsets(.init(top: 0, leading: 20, bottom: 0, trailing: 20))
+                .listRowSeparator(.hidden)
             }
             .listRowSpacing(10)
-            .listRowSeparator(.hidden)
             .listStyle(.plain)
             .safeAreaInset(edge: .bottom) {
                 Spacer()

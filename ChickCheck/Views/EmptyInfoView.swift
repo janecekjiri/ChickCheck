@@ -1,5 +1,5 @@
 //
-//  EmptyView.swift
+//  EmptyInfoView.swift
 //  ChickCheck
 //
 //  Created by Jiri Janecek on 15.05.2024.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct EmptyView: View {
+struct EmptyInfoView: View {
     var body: some View {
         VStack(spacing: 10) {
             Image("hen")
@@ -34,7 +34,7 @@ struct EmptyView: View {
 }
 
 #Preview {
-    EmptyView()
+    EmptyInfoView()
 }
 
 extension Color {
