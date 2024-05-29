@@ -5,6 +5,7 @@
 //  Created by Jiri Janecek on 29.05.2024.
 //
 
+import Combine
 import Foundation
 
 final class DetailViewModel: ObservableObject {
@@ -20,11 +21,22 @@ final class DetailViewModel: ObservableObject {
     
     let type: DetailType
     @Published var model: DetailModel
+    @Published var isSaveButtonActive = false
+    
+    private var cancellableSet: Set<AnyCancellable> = []
     
     // MARK: - Init
     
     init(type: DetailType, model: DetailModel? = nil) {
         self.type = type
         self.model = model ?? DetailModel()
+        
+        self.model.$count
+            .receive(on: RunLoop.main)
+            .map { count in
+                return count != nil
+            }
+            .assign(to: \.isSaveButtonActive, on: self)
+            .store(in: &cancellableSet)
     }
 }
