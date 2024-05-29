@@ -10,6 +10,7 @@ import SwiftUI
 struct DetailView: View {
     @State private var showAlert = false
     @Environment(\.dismiss) var dismiss
+    @EnvironmentObject var recordStore: RecordStore
     
     @ObservedObject private var viewModel: DetailViewModel
     
@@ -29,18 +30,19 @@ struct DetailView: View {
             Spacer()
             
             Button(action: {
-                
+                recordStore.saveRecord(viewModel.model)
+                // dismiss()
             }, label: {
                 Text("save")
                     .font(.title2)
                     .fontWeight(.semibold)
                     .foregroundStyle(.white)
                     .padding(.vertical, 12)
+                    .frame(minWidth: 0, maxWidth: .infinity)
+                    .frame(height: 50)
+                    .background(viewModel.isSaveButtonActive ? Color.green : .gray)
+                    .cornerRadius(25)
             })
-            .frame(minWidth: 0, maxWidth: .infinity)
-            .frame(height: 50)
-            .background(viewModel.isSaveButtonActive ? Color.green : .gray)
-            .cornerRadius(25)
             .disabled(!viewModel.isSaveButtonActive)
             
             Spacer()
@@ -81,8 +83,8 @@ struct DetailView: View {
                 Button(
                     role: .destructive,
                     action: {
+                        recordStore.removeRecord(self.viewModel.model)
                         dismiss()
-                        // TODO: Smaž detail
                     },
                     label: {
                         Text("yes")
@@ -110,5 +112,5 @@ struct DetailView: View {
 }
 
 #Preview {
-    DetailView(type: .new)
+    DetailView(type: .new).environmentObject(RecordStore())
 }

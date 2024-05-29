@@ -7,13 +7,7 @@
 
 import Foundation
 
-typealias DetailRecord = [Date: Int]
-
 final class DetailModel: ObservableObject {
     @Published var count: Int? = nil
     @Published var date: Date = Date.now
-    
-    func toDetailRecord() -> DetailRecord {
-        [date: count ?? 0]
-    }
 }
