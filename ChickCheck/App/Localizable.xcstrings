@@ -1,6 +1,9 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "" : {
+
+    },
     "%lld average_bunch" : {
       "localizations" : {
         "cs" : {
@@ -229,6 +232,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Have your hens laid eggs?"
+          }
+        }
+      }
+    },
+    "hide_keyboard" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Skrýt klávesnici"
           }
         }
       }
