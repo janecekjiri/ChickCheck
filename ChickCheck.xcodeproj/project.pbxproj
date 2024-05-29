@@ -20,6 +20,7 @@
 		1156AEE82BF552EF00D21E1B /* DateFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1156AEE72BF552EF00D21E1B /* DateFormView.swift */; };
 		1156AEEA2BF5530900D21E1B /* EggsCountFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1156AEE92BF5530900D21E1B /* EggsCountFormView.swift */; };
 		1156AEEF2BFCBD1D00D21E1B /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 1156AEEE2BFCBD1D00D21E1B /* Localizable.xcstrings */; };
+		11A9D89D2C06FCAB0082E8D6 /* DetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A9D89C2C06FCAB0082E8D6 /* DetailModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		1156AEE92BF5530900D21E1B /* EggsCountFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EggsCountFormView.swift; sourceTree = "<group>"; };
 		1156AEED2BFB2AED00D21E1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		1156AEEE2BFCBD1D00D21E1B /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		11A9D89C2C06FCAB0082E8D6 /* DetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,8 +76,8 @@
 				1156AEEB2BF5543600D21E1B /* App */,
 				1156AED62BF4A6EE00D21E1B /* Views */,
 				1156AED42BF4A6CA00D21E1B /* Screens */,
+				11A9D89E2C06FD8A0082E8D6 /* Models */,
 				1156AEEC2BF5548700D21E1B /* Media */,
-				1156AEEE2BFCBD1D00D21E1B /* Localizable.xcstrings */,
 			);
 			path = ChickCheck;
 			sourceTree = "<group>";
@@ -139,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				1156AEC22BF49ADD00D21E1B /* ChickCheckApp.swift */,
+				1156AEEE2BFCBD1D00D21E1B /* Localizable.xcstrings */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -150,6 +153,14 @@
 				1156AEC82BF49ADE00D21E1B /* Preview Content */,
 			);
 			path = Media;
+			sourceTree = "<group>";
+		};
+		11A9D89E2C06FD8A0082E8D6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				11A9D89C2C06FCAB0082E8D6 /* DetailModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,6 +244,7 @@
 				1156AED32BF49B6000D21E1B /* HomeView.swift in Sources */,
 				1156AEE42BF4CF6600D21E1B /* DetailView.swift in Sources */,
 				1156AEC32BF49ADD00D21E1B /* ChickCheckApp.swift in Sources */,
+				11A9D89D2C06FCAB0082E8D6 /* DetailModel.swift in Sources */,
 				1156AEE62BF5521C00D21E1B /* StatisticsValueView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
