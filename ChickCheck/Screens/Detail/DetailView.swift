@@ -9,6 +9,7 @@ import SwiftUI
 
 struct DetailView: View {
     @State private var showAlert = false
+    @State private var isSaveButtonActive = false
     @Environment(\.dismiss) var dismiss
     
     private let viewModel: DetailViewModel
@@ -35,8 +36,9 @@ struct DetailView: View {
             })
             .frame(minWidth: 0, maxWidth: .infinity)
             .frame(height: 50)
-            .background(Color.green)
+            .background(isSaveButtonActive ? Color.green : .gray)
             .cornerRadius(25)
+            .disabled(!isSaveButtonActive)
             
             Spacer()
                 .frame(height: 20)
