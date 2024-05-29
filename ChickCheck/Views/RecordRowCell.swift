@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct RecordRowCell: View {
-    private var count: String
-    private var date: String
+    private var count: Int
+    private var date: Date
     
     var body: some View {
         HStack {
-            Text(count)
+            Text("\(count)")
                 .font(.largeTitle)
                 .fontWeight(.medium)
                 .frame(width: 45, alignment: .trailing)
@@ -26,7 +26,7 @@ struct RecordRowCell: View {
             
             Spacer()
             
-            Text(date)
+            Text(date.formatted(.dateTime.day().month().year()))
                 .font(.title2)
                 .fontWeight(.medium)
                 .foregroundStyle(.black)
@@ -38,12 +38,12 @@ struct RecordRowCell: View {
         .listRowInsets(.init(top: 0, leading: 20, bottom: 0, trailing: 20))
     }
     
-    init(count: String, date: String) {
+    init(count: Int, date: Date) {
         self.count = count
         self.date = date
     }
 }
 
 #Preview {
-    RecordRowCell(count: "12", date: "8.5.2024")
+    RecordRowCell(count: 15, date: Date.now)
 }

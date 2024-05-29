@@ -12,10 +12,17 @@ typealias DetailRecord = [String: Int]
 final class RecordStore: ObservableObject {
     private static let kRecordsKey = "recordsKey"
     
-    @Published var records: DetailRecord = UserDefaults.standard.object(forKey: RecordStore.kRecordsKey) as? DetailRecord ?? [:] {
+    @Published var recordsExternal: [DetailModel] = []
+    
+    private var records: DetailRecord = UserDefaults.standard.object(forKey: RecordStore.kRecordsKey) as? DetailRecord ?? [:] {
         didSet {
+            self.convertRecordsIntoDetails()
             UserDefaults.standard.setValue(self.records, forKey: RecordStore.kRecordsKey)
         }
+    }
+    
+    init() {
+        self.convertRecordsIntoDetails()
     }
     
     func saveRecord(_ detail: DetailModel) {
@@ -34,6 +41,19 @@ final class RecordStore: ObservableObject {
     
     func removeAll() {
         self.records = [:]
+    }
+    
+    private func convertRecordsIntoDetails() {
+        var details: [DetailModel] = []
+        for record in self.records {
+            guard let date = record.key.dateFromTextIdentifier else { continue }
+            let detail = DetailModel()
+            detail.date = date
+            detail.count = record.value
+            details.append(detail)
+        }
+        details.sort { $0.date > $1.date }
+        self.recordsExternal = details
     }
 }
 

@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct HomeView: View {
+    @EnvironmentObject var recordStore: RecordStore
     @State private var showDeleteAlert = false
     @State private var showDetailModal = false
     @Environment(\.dismiss) var dismiss
@@ -66,7 +67,7 @@ struct HomeView: View {
     }
     
     private func makeContentView() -> HomeContentView {
-        var content = HomeContentView()
+        var content = HomeContentView(records: recordStore.recordsExternal)
         content.onAddButtonTap = {
             showDetailModal = true
         }
@@ -75,42 +76,21 @@ struct HomeView: View {
 }
 
 #Preview {
-    HomeView()
+    HomeView().environmentObject(RecordStore())
 }
 
 struct HomeContentView: View {
+    var records: [DetailModel]
     var onAddButtonTap: (() -> Void)?
     
     var body: some View {
         ZStack {
-            List {
+            List(records, id: \.date) { detail in
                 ZStack(alignment: .center) {
-                    RecordRowCell(count: "88", date: "8.5.2024")
+                    RecordRowCell(count: detail.count ?? 0, date: detail.date)
                     
                     // TODO: Použít zde navigationDestination
-                    NavigationLink(destination: DetailView(type: .update)) {
-                        EmptyView()
-                    }
-                    .opacity(0)
-                }
-                .listRowInsets(.init(top: 0, leading: 20, bottom: 0, trailing: 20))
-                .listRowSeparator(.hidden)
-                
-                ZStack(alignment: .center) {
-                    RecordRowCell(count: "5", date: "7.5.2024")
-                    
-                    NavigationLink(destination: DetailView(type: .update)) {
-                        EmptyView()
-                    }
-                    .opacity(0)
-                }
-                .listRowInsets(.init(top: 0, leading: 20, bottom: 0, trailing: 20))
-                .listRowSeparator(.hidden)
-                
-                ZStack {
-                    RecordRowCell(count: "13", date: "6.5.2024")
-                    
-                    NavigationLink(destination: DetailView(type: .update)) {
+                    NavigationLink(destination: DetailView(type: .update, model: detail)) {
                         EmptyView()
                     }
                     .opacity(0)

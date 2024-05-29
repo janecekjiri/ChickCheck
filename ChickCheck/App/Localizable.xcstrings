@@ -4,6 +4,9 @@
     "" : {
 
     },
+    "%lld" : {
+
+    },
     "%lld average_bunch" : {
       "localizations" : {
         "cs" : {
@@ -301,7 +304,6 @@
       }
     },
     "tab_bunch" : {
-      "extractionState" : "stale",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
@@ -318,7 +320,6 @@
       }
     },
     "tab_stats" : {
-      "extractionState" : "stale",
       "localizations" : {
         "cs" : {
           "stringUnit" : {

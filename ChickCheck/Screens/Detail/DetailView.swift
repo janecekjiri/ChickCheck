@@ -106,8 +106,8 @@ struct DetailView: View {
         )
     }
     
-    init(type: DetailViewModel.DetailType) {
-        self.viewModel = DetailViewModel(type: type)
+    init(type: DetailViewModel.DetailType, model: DetailModel? = nil) {
+        self.viewModel = DetailViewModel(type: type, model: model)
     }
 }
 
