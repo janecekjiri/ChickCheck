@@ -34,12 +34,9 @@ struct EggsCountFormView: View {
                 .background(Color.pinkRose)
                 .cornerRadius(5)
                 .toolbar {
-                    // Using empty Toolbar Item here to push Cancel button to the right
-                    ToolbarItem(id: "empty_item", placement: .keyboard) {
-                        Text(verbatim: "")
-                    }
-                    
                     ToolbarItemGroup(placement: .keyboard) {
+                        Spacer()
+                        
                         Button("hide_keyboard") {
                             isEggsCountFieldActive = false
                         }

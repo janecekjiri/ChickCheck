@@ -243,6 +243,12 @@
             "state" : "translated",
             "value" : "Skrýt klávesnici"
           }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hide keyboard"
+          }
         }
       }
     },
