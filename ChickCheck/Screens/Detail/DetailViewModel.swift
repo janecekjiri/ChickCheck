@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class DetailViewModel {
+final class DetailViewModel: ObservableObject {
     // MARK: - Properties
     
     enum DetailType {
@@ -19,12 +19,12 @@ final class DetailViewModel {
     }
     
     let type: DetailType
-    var model: DetailModel?
+    @Published var model: DetailModel
     
     // MARK: - Init
     
     init(type: DetailType, model: DetailModel? = nil) {
         self.type = type
-        self.model = model
+        self.model = model ?? DetailModel()
     }
 }

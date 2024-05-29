@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct EggsCountFormView: View {
-    @State private var eggsCount: Int?
+    @Binding var eggsCount: Int?
     @FocusState private var isEggsCountFieldActive: Bool
     
     var body: some View {
@@ -51,5 +51,6 @@ struct EggsCountFormView: View {
 }
 
 #Preview {
-    EggsCountFormView()
+    @State var eggsCount: Int? = nil
+    return EggsCountFormView(eggsCount: $eggsCount)
 }

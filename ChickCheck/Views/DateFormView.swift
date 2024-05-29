@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct DateFormView: View {
+    @Binding var date: Date
     @State private var showDatePicker = false
-    @State private var date = Date.now
     
     var body: some View {
         VStack(spacing: 0) {
@@ -82,5 +82,6 @@ struct DateFormView: View {
 }
 
 #Preview {
-    DateFormView()
+    @State var date = Date.now
+    return DateFormView(date: $date)
 }

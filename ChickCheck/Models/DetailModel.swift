@@ -9,11 +9,11 @@ import Foundation
 
 typealias DetailRecord = [Date: Int]
 
-struct DetailModel: Hashable {
-    let count: Int
-    let date: Date
+final class DetailModel: ObservableObject {
+    @Published var count: Int? = nil
+    @Published var date: Date = Date.now
     
     func toDetailRecord() -> DetailRecord {
-        [date: count]
+        [date: count ?? 0]
     }
 }

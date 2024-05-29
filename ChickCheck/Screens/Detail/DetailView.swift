@@ -12,16 +12,20 @@ struct DetailView: View {
     @State private var isSaveButtonActive = false
     @Environment(\.dismiss) var dismiss
     
-    private let viewModel: DetailViewModel
+    @ObservedObject private var viewModel: DetailViewModel
     
     var body: some View {
         VStack(spacing: 0) {
-            DateFormView()
+            DateFormView(date: $viewModel.model.date)
+            // For testing purposes
+            // Text("Date is \(viewModel.model.date.formatted(.dateTime.day().month().year()))")
             
             Spacer()
                 .frame(height: 20)
             
-            EggsCountFormView()
+            EggsCountFormView(eggsCount: $viewModel.model.count)
+            // For testing purposes
+            // Text("Eggs count is \(viewModel.model.count ?? -1)")
             
             Spacer()
             
