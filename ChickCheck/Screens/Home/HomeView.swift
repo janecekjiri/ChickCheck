@@ -60,7 +60,7 @@ struct HomeView: View {
         )
         .sheet(isPresented: $showDetailModal, content: {
             NavigationStack {
-                DetailView()
+                DetailView(type: .new)
             }
         })
     }
@@ -88,7 +88,7 @@ struct HomeContentView: View {
                     RecordRowCell(count: "88", date: "8.5.2024")
                     
                     // TODO: Použít zde navigationDestination
-                    NavigationLink(destination: DetailView()) {
+                    NavigationLink(destination: DetailView(type: .update)) {
                         EmptyView()
                     }
                     .opacity(0)
@@ -99,7 +99,7 @@ struct HomeContentView: View {
                 ZStack(alignment: .center) {
                     RecordRowCell(count: "5", date: "7.5.2024")
                     
-                    NavigationLink(destination: DetailView()) {
+                    NavigationLink(destination: DetailView(type: .update)) {
                         EmptyView()
                     }
                     .opacity(0)
@@ -110,7 +110,7 @@ struct HomeContentView: View {
                 ZStack {
                     RecordRowCell(count: "13", date: "6.5.2024")
                     
-                    NavigationLink(destination: DetailView()) {
+                    NavigationLink(destination: DetailView(type: .update)) {
                         EmptyView()
                     }
                     .opacity(0)

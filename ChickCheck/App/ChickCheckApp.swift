@@ -11,7 +11,9 @@ import SwiftUI
 struct ChickCheckApp: App {
     var body: some Scene {
         WindowGroup {
-            DetailView()
+            NavigationStack {
+                DetailView(type: .new)
+            }
 //            TabView {
 //                HomeView()
 //                    .tabItem {

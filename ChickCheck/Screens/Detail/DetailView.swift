@@ -11,6 +11,8 @@ struct DetailView: View {
     @State private var showAlert = false
     @Environment(\.dismiss) var dismiss
     
+    private let viewModel: DetailViewModel
+    
     var body: some View {
         VStack(spacing: 0) {
             DateFormView()
@@ -40,32 +42,32 @@ struct DetailView: View {
                 .frame(height: 20)
         }
         .padding(.horizontal, 20)
-        // TODO: Upravit titulek na "Vytvořit záznam" a "Upravit záznam"
-        .navigationTitle("detail_screen_title")
+        .navigationTitle(viewModel.type == .new ? "detail_screen_title_new" : "detail_screen_title_updating")
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
-            // TODO: Zobraz detail pouze, pokud jde o úpravu, nikoliv vytvoření záznamu
-            ToolbarItem(placement: .topBarTrailing) {
-                Button(
-                    action: {
-                        showAlert = true
-                    },
-                    label: {
-                        Image(systemName: "trash")
-                            .renderingMode(.template)
-                            .foregroundStyle(Color(.label))
-                })
+            if viewModel.type == .update {
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button(
+                        action: {
+                            showAlert = true
+                        },
+                        label: {
+                            Image(systemName: "trash")
+                                .renderingMode(.template)
+                                .foregroundStyle(Color(.label))
+                    })
+                }
+            } else {
+                ToolbarItem(placement: .topBarLeading) {
+                    Button(
+                        action: {
+                            dismiss()
+                        },
+                        label: {
+                            Text("cancel")
+                    })
+                }
             }
-            
-//            ToolbarItem(placement: .topBarLeading) {
-//                Button(
-//                    action: {
-//                        dismiss()
-//                    },
-//                    label: {
-//                        Text("cancel")
-//                })
-//            }
         }
         .alert(
             "delete_detail_alert_title",
@@ -96,8 +98,12 @@ struct DetailView: View {
             }
         )
     }
+    
+    init(type: DetailViewModel.DetailType) {
+        self.viewModel = DetailViewModel(type: type)
+    }
 }
 
 #Preview {
-    DetailView()
+    DetailView(type: .new)
 }

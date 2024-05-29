@@ -42,7 +42,6 @@
       }
     },
     "cancel" : {
-      "extractionState" : "stale",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
@@ -154,18 +153,34 @@
         }
       }
     },
-    "detail_screen_title" : {
+    "detail_screen_title_new" : {
       "localizations" : {
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Detail"
+            "value" : "Vytvořit záznam"
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Detail"
+            "value" : "Create a record"
+          }
+        }
+      }
+    },
+    "detail_screen_title_updating" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Upravit záznam"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Update a record"
           }
         }
       }
@@ -267,6 +282,7 @@
       }
     },
     "tab_bunch" : {
+      "extractionState" : "stale",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
@@ -283,6 +299,7 @@
       }
     },
     "tab_stats" : {
+      "extractionState" : "stale",
       "localizations" : {
         "cs" : {
           "stringUnit" : {

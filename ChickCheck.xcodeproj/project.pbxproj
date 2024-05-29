@@ -21,6 +21,7 @@
 		1156AEEA2BF5530900D21E1B /* EggsCountFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1156AEE92BF5530900D21E1B /* EggsCountFormView.swift */; };
 		1156AEEF2BFCBD1D00D21E1B /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 1156AEEE2BFCBD1D00D21E1B /* Localizable.xcstrings */; };
 		11A9D89D2C06FCAB0082E8D6 /* DetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A9D89C2C06FCAB0082E8D6 /* DetailModel.swift */; };
+		11A9D8A02C06FDE90082E8D6 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A9D89F2C06FDE90082E8D6 /* DetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		1156AEED2BFB2AED00D21E1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		1156AEEE2BFCBD1D00D21E1B /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		11A9D89C2C06FCAB0082E8D6 /* DetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailModel.swift; sourceTree = "<group>"; };
+		11A9D89F2C06FDE90082E8D6 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				1156AEE32BF4CF6600D21E1B /* DetailView.swift */,
+				11A9D89F2C06FDE90082E8D6 /* DetailViewModel.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -242,6 +245,7 @@
 				1156AEEA2BF5530900D21E1B /* EggsCountFormView.swift in Sources */,
 				1156AED82BF4A79600D21E1B /* AddButton.swift in Sources */,
 				1156AED32BF49B6000D21E1B /* HomeView.swift in Sources */,
+				11A9D8A02C06FDE90082E8D6 /* DetailViewModel.swift in Sources */,
 				1156AEE42BF4CF6600D21E1B /* DetailView.swift in Sources */,
 				1156AEC32BF49ADD00D21E1B /* ChickCheckApp.swift in Sources */,
 				11A9D89D2C06FCAB0082E8D6 /* DetailModel.swift in Sources */,
