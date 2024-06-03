@@ -12,6 +12,7 @@ final class DetailModel: Hashable, ObservableObject {
         Calendar.current.isDate(lhs.date, inSameDayAs: rhs.date)
     }
     
+    /// Count of laid eggs
     @Published var count: Int? = nil
     @Published var date: Date = Date.now
     

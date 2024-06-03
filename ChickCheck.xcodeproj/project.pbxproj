@@ -26,6 +26,8 @@
 		11A9D8A62C0D9A120082E8D6 /* StatisticsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A9D8A52C0D9A120082E8D6 /* StatisticsViewModel.swift */; };
 		11A9D8A82C0DB4C70082E8D6 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A9D8A72C0DB4C70082E8D6 /* HomeViewModel.swift */; };
 		11A9D8AB2C0DB74F0082E8D6 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A9D8AA2C0DB74F0082E8D6 /* ColorExtension.swift */; };
+		11A9D8AD2C0DC0A00082E8D6 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A9D8AC2C0DC0A00082E8D6 /* DateExtension.swift */; };
+		11A9D8AF2C0DC0B80082E8D6 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A9D8AE2C0DC0B80082E8D6 /* StringExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,8 @@
 		11A9D8A52C0D9A120082E8D6 /* StatisticsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsViewModel.swift; sourceTree = "<group>"; };
 		11A9D8A72C0DB4C70082E8D6 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		11A9D8AA2C0DB74F0082E8D6 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		11A9D8AC2C0DC0A00082E8D6 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		11A9D8AE2C0DC0B80082E8D6 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +186,8 @@
 			isa = PBXGroup;
 			children = (
 				11A9D8AA2C0DB74F0082E8D6 /* ColorExtension.swift */,
+				11A9D8AC2C0DC0A00082E8D6 /* DateExtension.swift */,
+				11A9D8AE2C0DC0B80082E8D6 /* StringExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -259,6 +265,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1156AEDC2BF4B07300D21E1B /* RecordRowCell.swift in Sources */,
+				11A9D8AD2C0DC0A00082E8D6 /* DateExtension.swift in Sources */,
 				1156AEE82BF552EF00D21E1B /* DateFormView.swift in Sources */,
 				1156AEE12BF4C7AB00D21E1B /* StatisticsView.swift in Sources */,
 				11A9D8A62C0D9A120082E8D6 /* StatisticsViewModel.swift in Sources */,
@@ -271,6 +278,7 @@
 				11A9D8A22C075A540082E8D6 /* RecordStore.swift in Sources */,
 				11A9D8AB2C0DB74F0082E8D6 /* ColorExtension.swift in Sources */,
 				1156AEC32BF49ADD00D21E1B /* ChickCheckApp.swift in Sources */,
+				11A9D8AF2C0DC0B80082E8D6 /* StringExtension.swift in Sources */,
 				11A9D89D2C06FCAB0082E8D6 /* DetailModel.swift in Sources */,
 				11A9D8A82C0DB4C70082E8D6 /* HomeViewModel.swift in Sources */,
 				1156AEE62BF5521C00D21E1B /* StatisticsValueView.swift in Sources */,

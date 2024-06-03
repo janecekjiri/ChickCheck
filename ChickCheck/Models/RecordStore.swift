@@ -10,6 +10,8 @@ import Foundation
 typealias DetailRecord = [String: Int]
 
 final class RecordStore: ObservableObject {
+    // MARK: - Properties
+    
     private static let kRecordsKey = "recordsKey"
     
     @Published var recordsExternal: [DetailModel] = []
@@ -21,22 +23,24 @@ final class RecordStore: ObservableObject {
         }
     }
     
+    // MARK: - Init
+    
     init() {
         self.convertRecordsIntoDetails()
     }
+    
+    // MARK: - Methods
     
     func saveRecord(_ detail: DetailModel) {
         var records = self.records
         records[detail.date.textIdentifier] = detail.count
         self.records = records
-        print("Počet uložených záznamů je \(records.count)")
     }
     
     func removeRecord(_ detail: DetailModel) {
         var records = self.records
         records[detail.date.textIdentifier] = nil
         self.records = records
-        print("Počet uložených záznamů je \(records.count)")
     }
     
     func removeAll() {
@@ -54,20 +58,5 @@ final class RecordStore: ObservableObject {
         }
         details.sort { $0.date > $1.date }
         self.recordsExternal = details
-    }
-}
-
-// TODO: Přesunout do vlastních souborů
-
-extension Date {
-    var textIdentifier: String {
-        "\(self.timeIntervalSince1970)"
-    }
-}
-
-extension String {
-    var dateFromTextIdentifier: Date? {
-        guard let timeIntervalSince1970 = Double(self) else { return nil }
-        return Date(timeIntervalSince1970: timeIntervalSince1970)
     }
 }
