@@ -7,7 +7,16 @@
 
 import Foundation
 
-final class DetailModel: ObservableObject {
+final class DetailModel: Hashable, ObservableObject {
+    static func == (lhs: DetailModel, rhs: DetailModel) -> Bool {
+        Calendar.current.isDate(lhs.date, inSameDayAs: rhs.date)
+    }
+    
     @Published var count: Int? = nil
     @Published var date: Date = Date.now
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(self.count)
+        hasher.combine(self.date)
+    }
 }

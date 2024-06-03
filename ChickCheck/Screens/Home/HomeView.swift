@@ -89,8 +89,7 @@ struct HomeContentView: View {
                 ZStack(alignment: .center) {
                     RecordRowCell(count: detail.count ?? 0, date: detail.date)
                     
-                    // TODO: Použít zde navigationDestination
-                    NavigationLink(destination: DetailView(type: .update, model: detail)) {
+                    NavigationLink(value: detail) {
                         EmptyView()
                     }
                     .opacity(0)
@@ -98,6 +97,9 @@ struct HomeContentView: View {
                 .listRowInsets(.init(top: 0, leading: 20, bottom: 0, trailing: 20))
                 .listRowSeparator(.hidden)
             }
+            .navigationDestination(for: DetailModel.self, destination: { detail in
+                DetailView(type: .update, model: detail)
+            })
             .listRowSpacing(10)
             .listStyle(.plain)
             .safeAreaInset(edge: .bottom) {
