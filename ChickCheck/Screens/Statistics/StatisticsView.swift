@@ -8,21 +8,22 @@
 import SwiftUI
 
 struct StatisticsView: View {
+    private static let kSpacerHeight: CGFloat = 20
     @ObservedObject private var viewModel: StatisticsViewModel
     
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
-            StatisticsValueView(value: viewModel.last7Days, timeRange: .sevenDays)
+            StatisticsValueView(value: self.viewModel.last7Days, timeRange: .sevenDays)
             
             Spacer()
-                .frame(height: 20)
+                .frame(height: Self.kSpacerHeight)
             
-            StatisticsValueView(value: viewModel.last14Days, timeRange: .forteenDays)
+            StatisticsValueView(value: self.viewModel.last14Days, timeRange: .forteenDays)
             
             Spacer()
-                .frame(height: 20)
+                .frame(height: Self.kSpacerHeight)
             
-            StatisticsValueView(value: viewModel.last30Days, timeRange: .thirtyDays)
+            StatisticsValueView(value: self.viewModel.last30Days, timeRange: .thirtyDays)
             
             Spacer()
         }
