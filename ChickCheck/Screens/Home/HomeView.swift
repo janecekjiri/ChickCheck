@@ -9,9 +9,10 @@ import SwiftUI
 
 struct HomeView: View {
     @EnvironmentObject var recordStore: RecordStore
+    @Environment(\.dismiss) var dismiss
+    
     @State private var showDeleteAlert = false
     @State private var showDetailModal = false
-    @Environment(\.dismiss) var dismiss
     
     var body: some View {
         NavigationStack {
@@ -25,7 +26,7 @@ struct HomeView: View {
                         ToolbarItem(placement: .topBarTrailing) {
                             Button(
                                 action: {
-                                    showDeleteAlert = true
+                                    self.showDeleteAlert = true
                                 },
                                 label: {
                                     Image(systemName: "trash")
@@ -38,7 +39,7 @@ struct HomeView: View {
         }
         .alert(
             "delete_all_bunches_alert_title",
-            isPresented: $showDeleteAlert,
+            isPresented: self.$showDeleteAlert,
             actions: {
                 Button(
                     role: .destructive,
@@ -64,7 +65,7 @@ struct HomeView: View {
                 Text("delete_all_bunches_alert_message")
             }
         )
-        .sheet(isPresented: $showDetailModal, content: {
+        .sheet(isPresented: self.$showDetailModal, content: {
             NavigationStack {
                 DetailView(type: .new)
             }
