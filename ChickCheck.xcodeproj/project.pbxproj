@@ -24,6 +24,7 @@
 		11A9D8A02C06FDE90082E8D6 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A9D89F2C06FDE90082E8D6 /* DetailViewModel.swift */; };
 		11A9D8A22C075A540082E8D6 /* RecordStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A9D8A12C075A540082E8D6 /* RecordStore.swift */; };
 		11A9D8A62C0D9A120082E8D6 /* StatisticsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A9D8A52C0D9A120082E8D6 /* StatisticsViewModel.swift */; };
+		11A9D8A82C0DB4C70082E8D6 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A9D8A72C0DB4C70082E8D6 /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		11A9D89F2C06FDE90082E8D6 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		11A9D8A12C075A540082E8D6 /* RecordStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordStore.swift; sourceTree = "<group>"; };
 		11A9D8A52C0D9A120082E8D6 /* StatisticsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsViewModel.swift; sourceTree = "<group>"; };
+		11A9D8A72C0DB4C70082E8D6 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				1156AED22BF49B6000D21E1B /* HomeView.swift */,
+				11A9D8A72C0DB4C70082E8D6 /* HomeViewModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -257,6 +260,7 @@
 				11A9D8A22C075A540082E8D6 /* RecordStore.swift in Sources */,
 				1156AEC32BF49ADD00D21E1B /* ChickCheckApp.swift in Sources */,
 				11A9D89D2C06FCAB0082E8D6 /* DetailModel.swift in Sources */,
+				11A9D8A82C0DB4C70082E8D6 /* HomeViewModel.swift in Sources */,
 				1156AEE62BF5521C00D21E1B /* StatisticsValueView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

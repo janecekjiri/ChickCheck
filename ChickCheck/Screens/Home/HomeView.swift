@@ -67,7 +67,7 @@ struct HomeView: View {
     }
     
     private func makeContentView() -> HomeContentView {
-        var content = HomeContentView(records: recordStore.recordsExternal)
+        var content = HomeContentView(details: recordStore.recordsExternal)
         content.onAddButtonTap = {
             showDetailModal = true
         }
@@ -80,12 +80,13 @@ struct HomeView: View {
 }
 
 struct HomeContentView: View {
-    var records: [DetailModel]
+    @ObservedObject private var viewModel: HomeViewModel
+    
     var onAddButtonTap: (() -> Void)?
     
     var body: some View {
         ZStack {
-            List(records, id: \.date) { detail in
+            List(viewModel.details, id: \.date) { detail in
                 ZStack(alignment: .center) {
                     RecordRowCell(count: detail.count ?? 0, date: detail.date)
                     
@@ -120,6 +121,10 @@ struct HomeContentView: View {
                 }
             }
         }
+    }
+    
+    init(details: [DetailModel]) {
+        self.viewModel = HomeViewModel(details: details)
     }
     
     private func makeAddButton() -> AddButton {
