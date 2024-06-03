@@ -22,17 +22,6 @@ enum TimeRangeEnum {
             30
         }
     }
-    
-    var upperIndex: Int {
-        switch self {
-        case .sevenDays:
-            6
-        case .forteenDays:
-            13
-        case .thirtyDays:
-            29
-        }
-    }
 }
 
 final class StatisticsViewModel: ObservableObject {
@@ -62,7 +51,7 @@ final class StatisticsViewModel: ObservableObject {
         /// Count of days which had recorded laid eggs
         var days: Double = 0.0
         
-        for index in 0...timeRange.upperIndex {
+        for index in 0...timeRange.numValue-1 {
             if let date = calendar.date(byAdding: .day, value: -index, to: today),
                let detail = self.details.first(where: { calendar.isDate(date, inSameDayAs: $0.date) }) {
                 count += detail.count ?? 0
