@@ -9,7 +9,7 @@ import SwiftUI
 
 @main
 struct ChickCheckApp: App {
-    let recordStore = RecordStore()
+    @ObservedObject var recordStore = RecordStore()
     
     var body: some Scene {
         WindowGroup {
