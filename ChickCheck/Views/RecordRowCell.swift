@@ -35,7 +35,6 @@ struct RecordRowCell: View {
         .padding(.vertical, 5)
         .background(Color.pinkRose)
         .cornerRadius(8)
-        .listRowInsets(.init(top: 0, leading: 20, bottom: 0, trailing: 20))
     }
     
     init(count: Int, date: Date) {

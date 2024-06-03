@@ -26,7 +26,7 @@ struct AddButton: View {
                         }
                     }
                 }
-                onTap?()
+                self.onTap?()
             }
     }
 }

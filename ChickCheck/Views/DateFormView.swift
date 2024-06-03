@@ -9,7 +9,7 @@ import SwiftUI
 
 struct DateFormView: View {
     @Binding var date: Date
-    @Binding var showDatePicker: Bool
+    @Binding var isDatePickerVisible: Bool
     
     var body: some View {
         VStack(spacing: 0) {
@@ -57,7 +57,7 @@ struct DateFormView: View {
                     .cornerRadius(5)
                     .onTapGesture {
                         withAnimation {
-                            self.showDatePicker.toggle()
+                            self.isDatePickerVisible.toggle()
                         }
                     }
             }
@@ -73,7 +73,7 @@ struct DateFormView: View {
                 Spacer()
             }
             
-            if self.showDatePicker {
+            if self.isDatePickerVisible {
                 DatePicker("", selection: $date, in: ...Date.now, displayedComponents: .date)
                     .datePickerStyle(GraphicalDatePickerStyle())
             }
@@ -83,6 +83,6 @@ struct DateFormView: View {
 
 #Preview {
     @State var date = Date.now
-    @State var isOpen = false
-    return DateFormView(date: $date, showDatePicker: $isOpen)
+    @State var isVisible = false
+    return DateFormView(date: $date, isDatePickerVisible: $isVisible)
 }

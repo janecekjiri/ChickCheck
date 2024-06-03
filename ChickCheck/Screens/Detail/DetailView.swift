@@ -21,7 +21,7 @@ struct DetailView: View {
                 VStack(spacing: 0) {
                     DateFormView(
                         date: self.$viewModel.model.date,
-                        showDatePicker: self.$isDatePickerOpen
+                        isDatePickerVisible: self.$isDatePickerOpen
                     )
                     // For testing purposes
                     // Text("Date is \(viewModel.model.date.formatted(.dateTime.day().month().year()))")
