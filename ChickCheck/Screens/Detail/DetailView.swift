@@ -34,7 +34,8 @@ struct DetailView: View {
                     // Text("Eggs count is \(viewModel.model.count ?? -1)")
                     
                     Spacer()
-                        .frame(height: self.isDatePickerOpen ? 10 : geometry.size.height - 300)
+                        .frame(height: self.isDatePickerOpen ? 10 : max(0, geometry.size.height - 300))
+                    // max function is here only for an error "invalid frame" to go away
                     
                     Button(action: {
                         self.recordStore.saveRecord(viewModel.model)
