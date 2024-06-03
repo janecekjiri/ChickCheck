@@ -11,8 +11,8 @@ struct HomeView: View {
     @EnvironmentObject var recordStore: RecordStore
     @Environment(\.dismiss) var dismiss
     
-    @State private var showDeleteAlert = false
-    @State private var showDetailModal = false
+    @State private var isDeleteAlertVisible = false
+    @State private var isDetailModalVisible = false
     
     var body: some View {
         NavigationStack {
@@ -26,7 +26,7 @@ struct HomeView: View {
                         ToolbarItem(placement: .topBarTrailing) {
                             Button(
                                 action: {
-                                    self.showDeleteAlert = true
+                                    self.isDeleteAlertVisible = true
                                 },
                                 label: {
                                     Image(systemName: "trash")
@@ -39,7 +39,7 @@ struct HomeView: View {
         }
         .alert(
             "delete_all_bunches_alert_title",
-            isPresented: self.$showDeleteAlert,
+            isPresented: self.$isDeleteAlertVisible,
             actions: {
                 Button(
                     role: .destructive,
@@ -65,7 +65,7 @@ struct HomeView: View {
                 Text("delete_all_bunches_alert_message")
             }
         )
-        .sheet(isPresented: self.$showDetailModal, content: {
+        .sheet(isPresented: self.$isDetailModalVisible, content: {
             NavigationStack {
                 DetailView(type: .new)
             }
@@ -75,7 +75,7 @@ struct HomeView: View {
     private func makeEmptyInfoView() -> EmptyInfoView {
         var view = EmptyInfoView()
         view.onAddButtonTap = {
-            showDetailModal = true
+            isDetailModalVisible = true
         }
         return view
     }
@@ -83,7 +83,7 @@ struct HomeView: View {
     private func makeContentView() -> HomeContentView {
         var content = HomeContentView(details: recordStore.recordsExternal)
         content.onAddButtonTap = {
-            showDetailModal = true
+            isDetailModalVisible = true
         }
         return content
     }

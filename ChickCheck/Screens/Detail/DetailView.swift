@@ -11,8 +11,8 @@ struct DetailView: View {
     @Environment(\.dismiss) var dismiss
     @EnvironmentObject var recordStore: RecordStore
     
-    @State private var isDatePickerOpen = false
-    @State private var showAlert = false
+    @State private var isDatePickerVisible = false
+    @State private var isAlertVisible = false
     @ObservedObject private var viewModel: DetailViewModel
     
     var body: some View {
@@ -21,7 +21,7 @@ struct DetailView: View {
                 VStack(spacing: 0) {
                     DateFormView(
                         date: self.$viewModel.model.date,
-                        isDatePickerVisible: self.$isDatePickerOpen
+                        isDatePickerVisible: self.$isDatePickerVisible
                     )
                     // For testing purposes
                     // Text("Date is \(viewModel.model.date.formatted(.dateTime.day().month().year()))")
@@ -34,7 +34,7 @@ struct DetailView: View {
                     // Text("Eggs count is \(viewModel.model.count ?? -1)")
                     
                     Spacer()
-                        .frame(height: self.isDatePickerOpen ? 10 : max(0, geometry.size.height - 300))
+                        .frame(height: self.isDatePickerVisible ? 10 : max(0, geometry.size.height - 300))
                     // max function is here only for an error "invalid frame" to go away
                     
                     Button(action: {
@@ -65,7 +65,7 @@ struct DetailView: View {
                     ToolbarItem(placement: .topBarTrailing) {
                         Button(
                             action: {
-                                self.showAlert = true
+                                self.isAlertVisible = true
                             },
                             label: {
                                 Image(systemName: "trash")
@@ -87,7 +87,7 @@ struct DetailView: View {
             }
             .alert(
                 "delete_detail_alert_title",
-                isPresented: self.$showAlert,
+                isPresented: self.$isAlertVisible,
                 actions: {
                     Button(
                         role: .destructive,
