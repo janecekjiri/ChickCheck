@@ -95,6 +95,9 @@ struct HomeContentView: View {
                     }
                     .opacity(0)
                 }
+                // Row is no longer highlighted upon returning from detail screen
+                // which I dismissed programatically
+                .listRowBackground(Color.clear)
                 .listRowInsets(.init(top: 0, leading: 20, bottom: 0, trailing: 20))
                 .listRowSeparator(.hidden)
             }
