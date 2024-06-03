@@ -13,7 +13,7 @@ struct RecordRowCell: View {
     
     var body: some View {
         HStack {
-            Text("\(count)")
+            Text("\(self.count)")
                 .font(.largeTitle)
                 .fontWeight(.medium)
                 .frame(width: 45, alignment: .trailing)
@@ -26,7 +26,7 @@ struct RecordRowCell: View {
             
             Spacer()
             
-            Text(date.formatted(.dateTime.day().month().year()))
+            Text(self.date.formatted(.dateTime.day().month().year()))
                 .font(.title2)
                 .fontWeight(.medium)
                 .foregroundStyle(.black)

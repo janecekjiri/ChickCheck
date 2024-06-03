@@ -16,13 +16,13 @@ struct AddButton: View {
             .renderingMode(.template)
             .resizable()
             .frame(width: 60, height: 60)
-            .foregroundStyle(.white, Color.green.opacity(isPressed ? 0.5 : 1))
+            .foregroundStyle(.white, Color.green.opacity(self.isPressed ? 0.5 : 1))
             .onTapGesture {
                 withAnimation {
-                    isPressed.toggle()
+                    self.isPressed.toggle()
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
                         withAnimation {
-                            isPressed.toggle()
+                            self.isPressed.toggle()
                         }
                     }
                 }

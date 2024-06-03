@@ -14,7 +14,7 @@ struct StatisticsValueView: View {
     var body: some View {
         VStack(spacing: 0) {
             HStack {
-                Text(value)
+                Text(self.value)
                     .font(.system(size: 50))
                     .fontWeight(.bold)
                 
@@ -22,7 +22,7 @@ struct StatisticsValueView: View {
             }
             
             HStack {
-                Text("\(timeRange.numValue) average_bunch")
+                Text("\(self.timeRange.numValue) average_bunch")
                     .font(.title2)
                     .fontWeight(.semibold)
                     .foregroundStyle(Color(.systemGray2))

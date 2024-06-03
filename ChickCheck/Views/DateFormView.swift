@@ -13,7 +13,7 @@ struct DateFormView: View {
     
     var body: some View {
         VStack(spacing: 0) {
-            // Datum label
+            // Date label
             HStack {
                 Text("date")
                     .font(.title)
@@ -25,9 +25,9 @@ struct DateFormView: View {
             Spacer()
                 .frame(height: 10)
             
-            // Pole pro datum, tlačítko
+            // Date field, button
             HStack(spacing: 10) {
-                // Pole pro datum
+                // Date field
                 ZStack {
                     Color.pinkRose
                         .frame(height: 50)
@@ -48,7 +48,7 @@ struct DateFormView: View {
                         .stroke(Color.black, lineWidth: /*@START_MENU_TOKEN@*/1.0/*@END_MENU_TOKEN@*/)
                 )
                 
-                // Tlačítko
+                // Button
                 Image("calendar")
                     .resizable()
                     .frame(width: 30, height: 30)
@@ -65,7 +65,7 @@ struct DateFormView: View {
             Spacer()
                 .frame(height: 5)
             
-            // Text pod polem
+            // Text below field
             HStack {
                 Text("date_picker_helper_message")
                     .font(.footnote)

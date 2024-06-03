@@ -15,7 +15,7 @@ struct EggsCountFormView: View {
         VStack {
             HStack {
                 Text("eggs_count")
-                    .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                    .font(.title)
                     .fontWeight(.bold)
                 
                 Spacer()
@@ -24,9 +24,9 @@ struct EggsCountFormView: View {
             Spacer()
                 .frame(height: 10)
             
-            TextField("insert_eggs_count", value: $eggsCount, format: .number)
+            TextField("insert_eggs_count", value: self.$eggsCount, format: .number)
                 .keyboardType(.numberPad)
-                .focused($isEggsCountFieldActive)
+                .focused(self.$isEggsCountFieldActive)
                 .font(.title2)
                 .fontWeight(.semibold)
                 .padding(.vertical, 12)
@@ -38,7 +38,7 @@ struct EggsCountFormView: View {
                         Spacer()
                         
                         Button("hide_keyboard") {
-                            isEggsCountFieldActive = false
+                            self.isEggsCountFieldActive = false
                         }
                     }
                 }
