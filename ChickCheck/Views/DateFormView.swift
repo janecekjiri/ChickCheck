@@ -16,7 +16,7 @@ struct DateFormView: View {
             // Datum label
             HStack {
                 Text("date")
-                    .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                    .font(.title)
                     .fontWeight(.bold)
                 
                 Spacer()

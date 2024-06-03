@@ -23,6 +23,7 @@
 		11A9D89D2C06FCAB0082E8D6 /* DetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A9D89C2C06FCAB0082E8D6 /* DetailModel.swift */; };
 		11A9D8A02C06FDE90082E8D6 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A9D89F2C06FDE90082E8D6 /* DetailViewModel.swift */; };
 		11A9D8A22C075A540082E8D6 /* RecordStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A9D8A12C075A540082E8D6 /* RecordStore.swift */; };
+		11A9D8A62C0D9A120082E8D6 /* StatisticsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A9D8A52C0D9A120082E8D6 /* StatisticsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		11A9D89C2C06FCAB0082E8D6 /* DetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailModel.swift; sourceTree = "<group>"; };
 		11A9D89F2C06FDE90082E8D6 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		11A9D8A12C075A540082E8D6 /* RecordStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordStore.swift; sourceTree = "<group>"; };
+		11A9D8A52C0D9A120082E8D6 /* StatisticsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				1156AEE02BF4C7AB00D21E1B /* StatisticsView.swift */,
+				11A9D8A52C0D9A120082E8D6 /* StatisticsViewModel.swift */,
 			);
 			path = Statistics;
 			sourceTree = "<group>";
@@ -244,6 +247,7 @@
 				1156AEDC2BF4B07300D21E1B /* RecordRowCell.swift in Sources */,
 				1156AEE82BF552EF00D21E1B /* DateFormView.swift in Sources */,
 				1156AEE12BF4C7AB00D21E1B /* StatisticsView.swift in Sources */,
+				11A9D8A62C0D9A120082E8D6 /* StatisticsViewModel.swift in Sources */,
 				1156AEDA2BF4A7B500D21E1B /* EmptyInfoView.swift in Sources */,
 				1156AEEA2BF5530900D21E1B /* EggsCountFormView.swift in Sources */,
 				1156AED82BF4A79600D21E1B /* AddButton.swift in Sources */,

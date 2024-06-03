@@ -9,19 +9,21 @@ import SwiftUI
 
 @main
 struct ChickCheckApp: App {
+    let recordStore = RecordStore()
+    
     var body: some Scene {
         WindowGroup {
 //            NavigationStack {
 //                DetailView(type: .new).environmentObject(RecordStore())
 //            }
             TabView {
-                HomeView().environmentObject(RecordStore())
+                HomeView().environmentObject(recordStore)
                     .tabItem {
                         Image(systemName: "house.fill")
                         Text("tab_bunch")
                     }
                 
-                StatisticsView()
+                StatisticsView(details: recordStore.recordsExternal)
                     .tabItem {
                         Image(systemName: "chart.bar.fill")
                         Text("tab_stats")
