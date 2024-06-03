@@ -25,6 +25,7 @@
 		11A9D8A22C075A540082E8D6 /* RecordStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A9D8A12C075A540082E8D6 /* RecordStore.swift */; };
 		11A9D8A62C0D9A120082E8D6 /* StatisticsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A9D8A52C0D9A120082E8D6 /* StatisticsViewModel.swift */; };
 		11A9D8A82C0DB4C70082E8D6 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A9D8A72C0DB4C70082E8D6 /* HomeViewModel.swift */; };
+		11A9D8AB2C0DB74F0082E8D6 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A9D8AA2C0DB74F0082E8D6 /* ColorExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		11A9D8A12C075A540082E8D6 /* RecordStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordStore.swift; sourceTree = "<group>"; };
 		11A9D8A52C0D9A120082E8D6 /* StatisticsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsViewModel.swift; sourceTree = "<group>"; };
 		11A9D8A72C0DB4C70082E8D6 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		11A9D8AA2C0DB74F0082E8D6 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 				1156AED62BF4A6EE00D21E1B /* Views */,
 				1156AED42BF4A6CA00D21E1B /* Screens */,
 				11A9D89E2C06FD8A0082E8D6 /* Models */,
+				11A9D8A92C0DB7370082E8D6 /* Extensions */,
 				1156AEEC2BF5548700D21E1B /* Media */,
 			);
 			path = ChickCheck;
@@ -175,6 +178,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		11A9D8A92C0DB7370082E8D6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				11A9D8AA2C0DB74F0082E8D6 /* ColorExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -258,6 +269,7 @@
 				11A9D8A02C06FDE90082E8D6 /* DetailViewModel.swift in Sources */,
 				1156AEE42BF4CF6600D21E1B /* DetailView.swift in Sources */,
 				11A9D8A22C075A540082E8D6 /* RecordStore.swift in Sources */,
+				11A9D8AB2C0DB74F0082E8D6 /* ColorExtension.swift in Sources */,
 				1156AEC32BF49ADD00D21E1B /* ChickCheckApp.swift in Sources */,
 				11A9D89D2C06FCAB0082E8D6 /* DetailModel.swift in Sources */,
 				11A9D8A82C0DB4C70082E8D6 /* HomeViewModel.swift in Sources */,

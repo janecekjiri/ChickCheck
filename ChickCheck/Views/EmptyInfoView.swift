@@ -29,18 +29,9 @@ struct EmptyInfoView: View {
         .padding(10)
         .background(Color.pinkRose)
         .cornerRadius(10)
-        //.padding(20)
     }
 }
 
 #Preview {
     EmptyInfoView()
-}
-
-extension Color {
-    static let pinkRose = Color(
-        red: 241/255,
-        green: 232/255,
-        blue: 232/255
-    )
 }
