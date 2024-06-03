@@ -13,9 +13,6 @@ struct ChickCheckApp: App {
     
     var body: some Scene {
         WindowGroup {
-//            NavigationStack {
-//                DetailView(type: .new).environmentObject(RecordStore())
-//            }
             TabView {
                 HomeView().environmentObject(recordStore)
                     .tabItem {
