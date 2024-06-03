@@ -15,21 +15,26 @@ struct HomeView: View {
     
     var body: some View {
         NavigationStack {
-            makeContentView()
-                .navigationBarTitleDisplayMode(.inline)
-                .toolbar {
-                    ToolbarItem(placement: .topBarTrailing) {
-                        Button(
-                            action: {
-                                showDeleteAlert = true
-                            },
-                            label: {
-                                Image(systemName: "trash")
-                                    .renderingMode(.template)
-                                    .foregroundStyle(Color(.label))
-                        })
+            if self.recordStore.recordsExternal.isEmpty {
+                self.makeEmptyInfoView()
+                    .padding(.horizontal, 20)
+            } else {
+                self.makeContentView()
+                    .navigationBarTitleDisplayMode(.inline)
+                    .toolbar {
+                        ToolbarItem(placement: .topBarTrailing) {
+                            Button(
+                                action: {
+                                    showDeleteAlert = true
+                                },
+                                label: {
+                                    Image(systemName: "trash")
+                                        .renderingMode(.template)
+                                        .foregroundStyle(Color(.label))
+                            })
+                        }
                     }
-                }
+            }
         }
         .alert(
             "delete_all_bunches_alert_title",
@@ -64,6 +69,14 @@ struct HomeView: View {
                 DetailView(type: .new)
             }
         })
+    }
+    
+    private func makeEmptyInfoView() -> EmptyInfoView {
+        var view = EmptyInfoView()
+        view.onAddButtonTap = {
+            showDetailModal = true
+        }
+        return view
     }
     
     private func makeContentView() -> HomeContentView {

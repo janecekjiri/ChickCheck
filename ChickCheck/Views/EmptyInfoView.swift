@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct EmptyInfoView: View {
+    var onAddButtonTap: (() -> Void)?
+    
     var body: some View {
         VStack(spacing: 10) {
             Image("hen")
@@ -23,12 +25,18 @@ struct EmptyInfoView: View {
                 .font(.body)
                 .multilineTextAlignment(.center)
             
-            AddButton()
+            self.makeAddButton()
             
         }
         .padding(10)
         .background(Color.pinkRose)
         .cornerRadius(10)
+    }
+    
+    private func makeAddButton() -> AddButton {
+        var button = AddButton()
+        button.onTap = onAddButtonTap
+        return button
     }
 }
 
