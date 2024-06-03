@@ -31,7 +31,7 @@ struct DetailView: View {
             
             Button(action: {
                 recordStore.saveRecord(viewModel.model)
-                // dismiss()
+                dismiss()
             }, label: {
                 Text("save")
                     .font(.title2)
