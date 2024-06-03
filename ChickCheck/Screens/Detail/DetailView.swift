@@ -8,30 +8,30 @@
 import SwiftUI
 
 struct DetailView: View {
-    @State private var showAlert = false
     @Environment(\.dismiss) var dismiss
     @EnvironmentObject var recordStore: RecordStore
     
+    @State private var showAlert = false
     @ObservedObject private var viewModel: DetailViewModel
     
     var body: some View {
         VStack(spacing: 0) {
-            DateFormView(date: $viewModel.model.date)
+            DateFormView(date: self.$viewModel.model.date)
             // For testing purposes
             // Text("Date is \(viewModel.model.date.formatted(.dateTime.day().month().year()))")
             
             Spacer()
                 .frame(height: 20)
             
-            EggsCountFormView(eggsCount: $viewModel.model.count)
+            EggsCountFormView(eggsCount: self.$viewModel.model.count)
             // For testing purposes
             // Text("Eggs count is \(viewModel.model.count ?? -1)")
             
             Spacer()
             
             Button(action: {
-                recordStore.saveRecord(viewModel.model)
-                dismiss()
+                self.recordStore.saveRecord(viewModel.model)
+                self.dismiss()
             }, label: {
                 Text("save")
                     .font(.title2)
@@ -40,23 +40,23 @@ struct DetailView: View {
                     .padding(.vertical, 12)
                     .frame(minWidth: 0, maxWidth: .infinity)
                     .frame(height: 50)
-                    .background(viewModel.isSaveButtonActive ? Color.green : .gray)
+                    .background(self.viewModel.isSaveButtonActive ? Color.green : .gray)
                     .cornerRadius(25)
             })
-            .disabled(!viewModel.isSaveButtonActive)
+            .disabled(!self.viewModel.isSaveButtonActive)
             
             Spacer()
                 .frame(height: 20)
         }
         .padding(.horizontal, 20)
-        .navigationTitle(viewModel.type == .new ? "detail_screen_title_new" : "detail_screen_title_updating")
+        .navigationTitle(self.viewModel.type == .new ? "detail_screen_title_new" : "detail_screen_title_updating")
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
-            if viewModel.type == .update {
+            if self.viewModel.type == .update {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button(
                         action: {
-                            showAlert = true
+                            self.showAlert = true
                         },
                         label: {
                             Image(systemName: "trash")
@@ -68,7 +68,7 @@ struct DetailView: View {
                 ToolbarItem(placement: .topBarLeading) {
                     Button(
                         action: {
-                            dismiss()
+                            self.dismiss()
                         },
                         label: {
                             Text("cancel")
@@ -78,13 +78,13 @@ struct DetailView: View {
         }
         .alert(
             "delete_detail_alert_title",
-            isPresented: $showAlert,
+            isPresented: self.$showAlert,
             actions: {
                 Button(
                     role: .destructive,
                     action: {
-                        recordStore.removeRecord(self.viewModel.model)
-                        dismiss()
+                        self.recordStore.removeRecord(self.viewModel.model)
+                        self.dismiss()
                     },
                     label: {
                         Text("yes")
