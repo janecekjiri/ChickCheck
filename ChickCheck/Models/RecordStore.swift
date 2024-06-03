@@ -33,6 +33,7 @@ final class RecordStore: ObservableObject {
     
     func saveRecord(_ detail: DetailModel) {
         var records = self.records
+        detail.date = detail.date.setDateToMidnight()
         records[detail.date.textIdentifier] = detail.count
         self.records = records
     }

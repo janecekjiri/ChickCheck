@@ -38,8 +38,8 @@ struct HomeView: View {
                 Button(
                     role: .destructive,
                     action: {
-                        dismiss()
-                        // TODO: Smaž všechny záznamy
+                        self.dismiss()
+                        self.recordStore.removeAll()
                     },
                     label: {
                         Text("yes")
@@ -48,7 +48,7 @@ struct HomeView: View {
                 Button(
                     role: .cancel,
                     action: {
-                        dismiss()
+                        self.dismiss()
                     },
                     label: {
                         Text("no")
