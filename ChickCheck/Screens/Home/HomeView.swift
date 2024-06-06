@@ -53,9 +53,7 @@ struct HomeView: View {
                 
                 Button(
                     role: .cancel,
-                    action: {
-                        self.dismiss()
-                    },
+                    action: {},
                     label: {
                         Text("no")
                     }
