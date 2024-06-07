@@ -59,7 +59,7 @@ final class StatisticsViewModel: ObservableObject {
             }
         }
         
-        let average: Double = days.isZero ? 0 : Double(count) / days
+        let average: Double = days.isZero ? 0 : ((Double(count) / days) * 10).rounded() / 10
         let stringAverage = String(format: "%.1f", average)
         
         switch timeRange {

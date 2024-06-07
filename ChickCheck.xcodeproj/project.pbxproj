@@ -20,6 +20,8 @@
 		1156AEE82BF552EF00D21E1B /* DateFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1156AEE72BF552EF00D21E1B /* DateFormView.swift */; };
 		1156AEEA2BF5530900D21E1B /* EggsCountFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1156AEE92BF5530900D21E1B /* EggsCountFormView.swift */; };
 		1156AEEF2BFCBD1D00D21E1B /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 1156AEEE2BFCBD1D00D21E1B /* Localizable.xcstrings */; };
+		11A9293D2C13039100C0E47E /* ChickCheckTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A9293C2C13039100C0E47E /* ChickCheckTests.swift */; };
+		11A929442C1303EC00C0E47E /* StatisticsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A929432C1303EC00C0E47E /* StatisticsViewModelTests.swift */; };
 		11A9D89D2C06FCAB0082E8D6 /* DetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A9D89C2C06FCAB0082E8D6 /* DetailModel.swift */; };
 		11A9D8A02C06FDE90082E8D6 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A9D89F2C06FDE90082E8D6 /* DetailViewModel.swift */; };
 		11A9D8A22C075A540082E8D6 /* RecordStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A9D8A12C075A540082E8D6 /* RecordStore.swift */; };
@@ -30,6 +32,16 @@
 		11A9D8AF2C0DC0B80082E8D6 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A9D8AE2C0DC0B80082E8D6 /* StringExtension.swift */; };
 		11A9D8B12C0DFB670082E8D6 /* HomeContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A9D8B02C0DFB670082E8D6 /* HomeContentView.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		11A9293E2C13039100C0E47E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1156AEB72BF49ADD00D21E1B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1156AEBE2BF49ADD00D21E1B;
+			remoteInfo = ChickCheck;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		1156AEBF2BF49ADD00D21E1B /* ChickCheck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChickCheck.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,6 +59,9 @@
 		1156AEE92BF5530900D21E1B /* EggsCountFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EggsCountFormView.swift; sourceTree = "<group>"; };
 		1156AEED2BFB2AED00D21E1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		1156AEEE2BFCBD1D00D21E1B /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		11A9293A2C13039100C0E47E /* ChickCheckTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChickCheckTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		11A9293C2C13039100C0E47E /* ChickCheckTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChickCheckTests.swift; sourceTree = "<group>"; };
+		11A929432C1303EC00C0E47E /* StatisticsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsViewModelTests.swift; sourceTree = "<group>"; };
 		11A9D89C2C06FCAB0082E8D6 /* DetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailModel.swift; sourceTree = "<group>"; };
 		11A9D89F2C06FDE90082E8D6 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		11A9D8A12C075A540082E8D6 /* RecordStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordStore.swift; sourceTree = "<group>"; };
@@ -66,6 +81,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		11A929372C13039100C0E47E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -73,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				1156AEC12BF49ADD00D21E1B /* ChickCheck */,
+				11A9293B2C13039100C0E47E /* ChickCheckTests */,
 				1156AEC02BF49ADD00D21E1B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -81,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				1156AEBF2BF49ADD00D21E1B /* ChickCheck.app */,
+				11A9293A2C13039100C0E47E /* ChickCheckTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -176,6 +200,15 @@
 			path = Media;
 			sourceTree = "<group>";
 		};
+		11A9293B2C13039100C0E47E /* ChickCheckTests */ = {
+			isa = PBXGroup;
+			children = (
+				11A9293C2C13039100C0E47E /* ChickCheckTests.swift */,
+				11A929432C1303EC00C0E47E /* StatisticsViewModelTests.swift */,
+			);
+			path = ChickCheckTests;
+			sourceTree = "<group>";
+		};
 		11A9D89E2C06FD8A0082E8D6 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -215,6 +248,24 @@
 			productReference = 1156AEBF2BF49ADD00D21E1B /* ChickCheck.app */;
 			productType = "com.apple.product-type.application";
 		};
+		11A929392C13039100C0E47E /* ChickCheckTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 11A929422C13039100C0E47E /* Build configuration list for PBXNativeTarget "ChickCheckTests" */;
+			buildPhases = (
+				11A929362C13039100C0E47E /* Sources */,
+				11A929372C13039100C0E47E /* Frameworks */,
+				11A929382C13039100C0E47E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				11A9293F2C13039100C0E47E /* PBXTargetDependency */,
+			);
+			name = ChickCheckTests;
+			productName = ChickCheckTests;
+			productReference = 11A9293A2C13039100C0E47E /* ChickCheckTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -227,6 +278,10 @@
 				TargetAttributes = {
 					1156AEBE2BF49ADD00D21E1B = {
 						CreatedOnToolsVersion = 15.1;
+					};
+					11A929392C13039100C0E47E = {
+						CreatedOnToolsVersion = 15.1;
+						TestTargetID = 1156AEBE2BF49ADD00D21E1B;
 					};
 				};
 			};
@@ -245,6 +300,7 @@
 			projectRoot = "";
 			targets = (
 				1156AEBE2BF49ADD00D21E1B /* ChickCheck */,
+				11A929392C13039100C0E47E /* ChickCheckTests */,
 			);
 		};
 /* End PBXProject section */
@@ -257,6 +313,13 @@
 				1156AECA2BF49ADE00D21E1B /* Preview Assets.xcassets in Resources */,
 				1156AEC72BF49ADE00D21E1B /* Assets.xcassets in Resources */,
 				1156AEEF2BFCBD1D00D21E1B /* Localizable.xcstrings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		11A929382C13039100C0E47E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,7 +352,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		11A929362C13039100C0E47E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11A9293D2C13039100C0E47E /* ChickCheckTests.swift in Sources */,
+				11A929442C1303EC00C0E47E /* StatisticsViewModelTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		11A9293F2C13039100C0E47E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1156AEBE2BF49ADD00D21E1B /* ChickCheck */;
+			targetProxy = 11A9293E2C13039100C0E47E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		1156AECB2BF49ADE00D21E1B /* Debug */ = {
@@ -469,6 +549,42 @@
 			};
 			name = Release;
 		};
+		11A929402C13039100C0E47E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LSX73KEXNV;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.weebly.janecek.ChickCheckTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChickCheck.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ChickCheck";
+			};
+			name = Debug;
+		};
+		11A929412C13039100C0E47E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LSX73KEXNV;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.weebly.janecek.ChickCheckTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChickCheck.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ChickCheck";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -486,6 +602,15 @@
 			buildConfigurations = (
 				1156AECE2BF49ADE00D21E1B /* Debug */,
 				1156AECF2BF49ADE00D21E1B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		11A929422C13039100C0E47E /* Build configuration list for PBXNativeTarget "ChickCheckTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				11A929402C13039100C0E47E /* Debug */,
+				11A929412C13039100C0E47E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
