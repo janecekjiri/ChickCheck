@@ -10,9 +10,9 @@ import SwiftUI
 struct EmptyInfoView: View {
     var onAddButtonTap: (() -> Void)?
     
-    var body: some View {
+    private var staticBodyContentView: some View {
         VStack(spacing: 10) {
-            Image("hen")
+            Image(decorative: "hen")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 150, height: 150)
@@ -20,13 +20,23 @@ struct EmptyInfoView: View {
             Text("empty_view_title")
                 .font(.title2)
                 .fontWeight(.semibold)
+                .foregroundStyle(.black)
             
             Text("empty_view_message")
                 .font(.body)
                 .multilineTextAlignment(.center)
+                .foregroundStyle(.black)
+        }
+        .background(Color.pinkRose)
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel("empty_view_container")
+    }
+    
+    var body: some View {
+        VStack(spacing: 10) {
+            self.staticBodyContentView
             
             self.makeAddButton()
-            
         }
         .padding(10)
         .background(Color.pinkRose)

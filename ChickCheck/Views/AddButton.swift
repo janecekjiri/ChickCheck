@@ -28,6 +28,10 @@ struct AddButton: View {
                 }
                 self.onTap?()
             }
+            .accessibilityRemoveTraits([.isImage])
+            .accessibilityAddTraits([.isButton])
+            .accessibilityLabel("add_button")
+            .accessibilityHint("add_button_hint")
     }
 }
 

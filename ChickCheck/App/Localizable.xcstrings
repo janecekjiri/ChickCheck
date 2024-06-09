@@ -47,6 +47,26 @@
         }
       }
     },
+    "add_button" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add new record"
+          }
+        }
+      }
+    },
+    "add_button_hint" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Opens new screen to record laid eggs for any given date"
+          }
+        }
+      }
+    },
     "cancel" : {
       "localizations" : {
         "cs" : {
@@ -203,6 +223,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Eggs count"
+          }
+        }
+      }
+    },
+    "empty_view_container" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Have your hens laid eggs? You haven't saved a bunch yet. If your hens have laid eggs, you can save them by tapping on the green \"+\" button below."
           }
         }
       }
