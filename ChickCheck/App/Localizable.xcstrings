@@ -49,6 +49,12 @@
     },
     "add_button" : {
       "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Přidat nový záznam"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -59,6 +65,12 @@
     },
     "add_button_hint" : {
       "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Otevře novou obrazovku k zaznamenání snesených vajec za jakýkoliv den"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -227,22 +239,12 @@
         }
       }
     },
-    "empty_view_container" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Have your hens laid eggs? You haven't saved a bunch yet. If your hens have laid eggs, you can save them by tapping on the green \"+\" button below."
-          }
-        }
-      }
-    },
     "empty_view_message" : {
       "localizations" : {
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Zatím jste neuložili žádnou snůšku. Pokud už Vaše slepičky snesly vajíčka, můžete je uložit napnutím na zelené tlačítko \"+\" níže."
+            "value" : "Zatím jste neuložili žádnou snůšku. Pokud už Vaše slepičky snesly vajíčka, můžete je uložit tapnutím na zelené tlačítko \"+\" níže."
           }
         },
         "en" : {

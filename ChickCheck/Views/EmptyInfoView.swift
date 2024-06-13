@@ -29,7 +29,7 @@ struct EmptyInfoView: View {
         }
         .background(Color.pinkRose)
         .accessibilityElement(children: .ignore)
-        .accessibilityLabel("empty_view_container")
+        .accessibilityLabel("empty_view_message")
     }
     
     var body: some View {
