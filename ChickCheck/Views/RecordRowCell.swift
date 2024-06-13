@@ -13,7 +13,7 @@ struct RecordRowCell: View {
     
     var body: some View {
         HStack {
-            Text("\(self.count)")
+            Text(verbatim: "\(self.count)")
                 .font(.largeTitle)
                 .fontWeight(.medium)
                 .frame(width: 45, alignment: .trailing)

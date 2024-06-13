@@ -4,8 +4,21 @@
     "" : {
 
     },
-    "%lld" : {
-
+    "%@ %lld statistics value " : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Průměrná snůška za posledních %2$lld dnů byla %1$@"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Average bunch of the last %2$lld days was %1$@"
+          }
+        }
+      }
     },
     "%lld %@ record row label" : {
       "localizations" : {
@@ -14,25 +27,25 @@
             "plural" : {
               "few" : {
                 "stringUnit" : {
-                  "state" : "translated",
+                  "state" : "needs_review",
                   "value" : "Dne %2$@ byly sneseny %1$lld vajíčka."
                 }
               },
               "many" : {
                 "stringUnit" : {
-                  "state" : "translated",
+                  "state" : "needs_review",
                   "value" : "Dne %2$@ bylo sneseno %1$lld vajíček."
                 }
               },
               "one" : {
                 "stringUnit" : {
-                  "state" : "translated",
+                  "state" : "needs_review",
                   "value" : "Dne %2$@ bylo sneseno 1 vajíčko."
                 }
               },
               "other" : {
                 "stringUnit" : {
-                  "state" : "translated",
+                  "state" : "needs_review",
                   "value" : "Dne %2$@ bylo sneseno %1$lld vajíček."
                 }
               }
@@ -40,9 +53,21 @@
           }
         },
         "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "%1$lld %2$@ record row label"
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "On %2$@ hens laid 1 egg."
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "On %2$@ hens laid %1$lld eggs."
+                }
+              }
+            }
           }
         }
       }

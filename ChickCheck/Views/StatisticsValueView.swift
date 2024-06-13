@@ -30,6 +30,8 @@ struct StatisticsValueView: View {
                 Spacer()
             }
         }
+        .accessibilityElement()
+        .accessibilityLabel("\(self.value) \(self.timeRange.numValue) statistics value ")
     }
     
     init(value: String, timeRange: TimeRangeEnum) {
