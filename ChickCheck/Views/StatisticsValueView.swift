@@ -14,7 +14,7 @@ struct StatisticsValueView: View {
     var body: some View {
         VStack(spacing: 0) {
             HStack {
-                Text(self.value)
+                Text(verbatim: self.value)
                     .font(.system(size: 50))
                     .fontWeight(.bold)
                 
@@ -41,5 +41,5 @@ struct StatisticsValueView: View {
 }
 
 #Preview {
-    StatisticsValueView(value: "13,6", timeRange: .sevenDays)
+    StatisticsValueView(value: "13.6", timeRange: .sevenDays)
 }

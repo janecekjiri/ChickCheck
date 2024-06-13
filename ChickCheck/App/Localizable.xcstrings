@@ -27,25 +27,25 @@
             "plural" : {
               "few" : {
                 "stringUnit" : {
-                  "state" : "needs_review",
+                  "state" : "translated",
                   "value" : "Dne %2$@ byly sneseny %1$lld vajíčka."
                 }
               },
               "many" : {
                 "stringUnit" : {
-                  "state" : "needs_review",
+                  "state" : "translated",
                   "value" : "Dne %2$@ bylo sneseno %1$lld vajíček."
                 }
               },
               "one" : {
                 "stringUnit" : {
-                  "state" : "needs_review",
+                  "state" : "translated",
                   "value" : "Dne %2$@ bylo sneseno 1 vajíčko."
                 }
               },
               "other" : {
                 "stringUnit" : {
-                  "state" : "needs_review",
+                  "state" : "translated",
                   "value" : "Dne %2$@ bylo sneseno %1$lld vajíček."
                 }
               }

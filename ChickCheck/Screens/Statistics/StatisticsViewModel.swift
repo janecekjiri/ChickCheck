@@ -59,16 +59,16 @@ final class StatisticsViewModel: ObservableObject {
             }
         }
         
-        let average: Double = days.isZero ? 0 : ((Double(count) / days) * 10).rounded() / 10
-        let stringAverage = String(format: "%.1f", average)
+        let average: Double = (days.isZero ? 0 : ((Double(count) / days) * 10).rounded() / 10)
+        let formattedAvg = average.formatted(.number.precision(.fractionLength(0...1)))
         
         switch timeRange {
         case .sevenDays:
-            self.last7Days = stringAverage
+            self.last7Days = formattedAvg
         case .forteenDays:
-            self.last14Days = stringAverage
+            self.last14Days = formattedAvg
         case .thirtyDays:
-            self.last30Days = stringAverage
+            self.last30Days = formattedAvg
         }
     }
 }
