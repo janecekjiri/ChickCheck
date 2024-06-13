@@ -36,6 +36,7 @@ struct DateFormView: View {
                     HStack {
                         Text(verbatim: self.date.formatted(.dateTime.day(.defaultDigits).month().year()))
                             .font(.title2)
+                            .foregroundStyle(.black)
                             .fontWeight(.semibold)
                             .padding(.vertical, 12)
                             .padding(.horizontal, 10)

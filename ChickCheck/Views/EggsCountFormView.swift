@@ -29,6 +29,7 @@ struct EggsCountFormView: View {
                 .focused(self.$isEggsCountFieldActive)
                 .font(.title2)
                 .fontWeight(.semibold)
+                .foregroundStyle(.black)
                 .padding(.vertical, 12)
                 .padding(.horizontal, 10)
                 .background(Color.pinkRose)
