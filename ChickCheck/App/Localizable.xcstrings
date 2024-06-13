@@ -47,6 +47,22 @@
         }
       }
     },
+    "%lld eggs count text field value" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zadali jste, že počet snešených vajíček je %lld"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "You wrote that the amount of laid eggs is %lld"
+          }
+        }
+      }
+    },
     "add_button" : {
       "localizations" : {
         "cs" : {

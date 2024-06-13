@@ -17,6 +17,8 @@ struct EggsCountFormView: View {
                 Text("eggs_count")
                     .font(.title)
                     .fontWeight(.bold)
+                    .accessibilityRemoveTraits(.isStaticText)
+                    .accessibilityAddTraits(.isHeader)
                 
                 Spacer()
             }
@@ -47,7 +49,15 @@ struct EggsCountFormView: View {
                     RoundedRectangle(cornerRadius: 5)
                         .stroke(Color.black, lineWidth: /*@START_MENU_TOKEN@*/1.0/*@END_MENU_TOKEN@*/)
                 )
+                .accessibilityValue(self.makeTextFieldAccessibilityValue())
         }
+    }
+    
+    private func makeTextFieldAccessibilityValue() -> Text {
+        if let eggsCount {
+            return Text("\(eggsCount) eggs count text field value")
+        }
+        return Text("insert_eggs_count")
     }
 }
 

@@ -18,7 +18,8 @@ struct DateFormView: View {
                 Text("date")
                     .font(.title)
                     .fontWeight(.bold)
-                    .accessibilityAddTraits(.isStaticText)
+                    .accessibilityRemoveTraits(.isStaticText)
+                    .accessibilityAddTraits(.isHeader)
                 
                 Spacer()
             }
