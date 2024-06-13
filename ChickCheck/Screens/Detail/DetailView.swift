@@ -71,6 +71,10 @@ struct DetailView: View {
                                 Image(systemName: "trash")
                                     .renderingMode(.template)
                                     .foregroundStyle(Color(.label))
+                                    .accessibilityRemoveTraits([.isImage])
+                                    .accessibilityAddTraits([.isButton])
+                                    .accessibilityLabel("detail_trash_accessibility_label")
+                                    .accessibilityHint("detail_trash_accessibility_hint")
                         })
                     }
                 } else {

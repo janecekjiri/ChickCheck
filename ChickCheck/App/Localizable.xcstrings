@@ -327,6 +327,38 @@
         }
       }
     },
+    "detail_trash_accessibility_hint" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Otevře dialog na potvrzení smazání záznamu"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Opens a dialog to confirm record deletion"
+          }
+        }
+      }
+    },
+    "detail_trash_accessibility_label" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Smazat záznam"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Delete record"
+          }
+        }
+      }
+    },
     "eggs_count" : {
       "localizations" : {
         "cs" : {
@@ -395,7 +427,7 @@
       "localizations" : {
         "cs" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Otevře dialog na potvrzení smazání všech záznamů"
           }
         },
@@ -411,7 +443,7 @@
       "localizations" : {
         "cs" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Smazat všechny záznamy"
           }
         },
