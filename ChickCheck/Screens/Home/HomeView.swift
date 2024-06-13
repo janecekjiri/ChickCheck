@@ -32,6 +32,10 @@ struct HomeView: View {
                                     Image(systemName: "trash")
                                         .renderingMode(.template)
                                         .foregroundStyle(Color(.label))
+                                        .accessibilityRemoveTraits([.isImage])
+                                        .accessibilityAddTraits([.isButton])
+                                        .accessibilityLabel("home_trash_accessibility_label")
+                                        .accessibilityHint("home_trash_accessibility_hint")
                             })
                         }
                     }

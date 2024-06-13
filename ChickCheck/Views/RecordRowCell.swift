@@ -35,6 +35,10 @@ struct RecordRowCell: View {
         .padding(.vertical, 5)
         .background(Color.pinkRose)
         .cornerRadius(8)
+        .accessibilityElement()
+        .accessibilityAddTraits(.isButton)
+        .accessibilityLabel("\(count) \(date.formatted(.dateTime.day().month().year())) record row label")
+        .accessibilityHint("record_row_hint")
     }
     
     init(count: Int, date: Date) {

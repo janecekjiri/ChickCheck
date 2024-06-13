@@ -7,6 +7,46 @@
     "%lld" : {
 
     },
+    "%lld %@ record row label" : {
+      "localizations" : {
+        "cs" : {
+          "variations" : {
+            "plural" : {
+              "few" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Dne %2$@ byly sneseny %1$lld vajíčka."
+                }
+              },
+              "many" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Dne %2$@ bylo sneseno %1$lld vajíček."
+                }
+              },
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Dne %2$@ bylo sneseno 1 vajíčko."
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Dne %2$@ bylo sneseno %1$lld vajíček."
+                }
+              }
+            }
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$lld %2$@ record row label"
+          }
+        }
+      }
+    },
     "%lld average_bunch" : {
       "localizations" : {
         "cs" : {
@@ -351,6 +391,38 @@
         }
       }
     },
+    "home_trash_accessibility_hint" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Otevře dialog na potvrzení smazání všech záznamů"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Opens a dialog to confirm records deletion"
+          }
+        }
+      }
+    },
+    "home_trash_accessibility_label" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Smazat všechny záznamy"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Delete all records"
+          }
+        }
+      }
+    },
     "insert_eggs_count" : {
       "localizations" : {
         "cs" : {
@@ -379,6 +451,22 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "No"
+          }
+        }
+      }
+    },
+    "record_row_hint" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Otevře obrazovku na editaci záznamu."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Opens screen for detail editing."
           }
         }
       }
