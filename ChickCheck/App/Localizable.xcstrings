@@ -79,6 +79,38 @@
         }
       }
     },
+    "calendar_button_hint" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Otevře kalendář"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Opens calendar"
+          }
+        }
+      }
+    },
+    "calendar_button_label" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kalendář"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Calendar"
+          }
+        }
+      }
+    },
     "cancel" : {
       "localizations" : {
         "cs" : {
@@ -123,6 +155,22 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tap on Calendar to pick a date."
+          }
+        }
+      }
+    },
+    "date_text_field_accessibility_hint" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pro změnu datumu označte další element, což je tlačítko kalendáře."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "To change the date, select next element, which is a calendar button."
           }
         }
       }

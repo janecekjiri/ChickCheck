@@ -18,6 +18,7 @@ struct DateFormView: View {
                 Text("date")
                     .font(.title)
                     .fontWeight(.bold)
+                    .accessibilityAddTraits(.isStaticText)
                 
                 Spacer()
             }
@@ -40,6 +41,8 @@ struct DateFormView: View {
                             .fontWeight(.semibold)
                             .padding(.vertical, 12)
                             .padding(.horizontal, 10)
+                            .accessibilityAddTraits(.isStaticText)
+                            .accessibilityHint("date_text_field_accessibility_hint")
                         
                         Spacer()
                     }
@@ -61,6 +64,10 @@ struct DateFormView: View {
                             self.isDatePickerVisible.toggle()
                         }
                     }
+                    .accessibilityRemoveTraits(.isImage)
+                    .accessibilityAddTraits(.isButton)
+                    .accessibilityLabel("calendar_button_label")
+                    .accessibilityHint("calendar_button_hint")
             }
             
             Spacer()
@@ -70,6 +77,7 @@ struct DateFormView: View {
             HStack {
                 Text("date_picker_helper_message")
                     .font(.footnote)
+                    .accessibilityHidden(true)
                 
                 Spacer()
             }
