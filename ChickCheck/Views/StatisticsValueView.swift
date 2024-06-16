@@ -10,12 +10,13 @@ import SwiftUI
 struct StatisticsValueView: View {
     private var value: String
     private var timeRange: TimeRangeEnum
+    @ScaledMetric(relativeTo: .title2) var titleSize = 50.0
     
     var body: some View {
         VStack(spacing: 0) {
             HStack {
                 Text(verbatim: self.value)
-                    .font(.system(size: 50))
+                    .font(.system(size: self.titleSize))
                     .fontWeight(.bold)
                 
                 Spacer()
