@@ -105,9 +105,7 @@ struct DetailView: View {
                     
                     Button(
                         role: .cancel,
-                        action: {
-                            dismiss()
-                        },
+                        action: {},
                         label: {
                             Text("no")
                         }

@@ -13,9 +13,10 @@ struct HomeView: View {
     
     @State private var isDeleteAlertVisible = false
     @State private var isDetailModalVisible = false
+    @State private var path = NavigationPath()
     
     var body: some View {
-        NavigationStack {
+        NavigationStack(path: self.$path) {
             if self.recordStore.recordsExternal.isEmpty {
                 self.makeEmptyInfoView()
                     .padding(.horizontal, 20)
@@ -77,7 +78,7 @@ struct HomeView: View {
     private func makeEmptyInfoView() -> EmptyInfoView {
         var view = EmptyInfoView()
         view.onAddButtonTap = {
-            isDetailModalVisible = true
+            self.isDetailModalVisible = true
         }
         return view
     }
@@ -85,7 +86,14 @@ struct HomeView: View {
     private func makeContentView() -> HomeContentView {
         var content = HomeContentView(details: recordStore.recordsExternal)
         content.onAddButtonTap = {
-            isDetailModalVisible = true
+            self.isDetailModalVisible = true
+        }
+        content.onAppendToPath = { detail in
+            self.path.append(detail)
+        }
+        content.onRemoveRecord = { detail in
+            guard let detail else { return }
+            self.recordStore.removeRecord(detail)
         }
         return content
     }
